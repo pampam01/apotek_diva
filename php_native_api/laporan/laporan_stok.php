@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Menampilkan obat dengan stok menipis (< 10) atau semua jika parameter all=1
     $show_all = isset($_GET['all']) ? $_GET['all'] : 0;
     
-    $query = "SELECT o.kode_obat, o.nama_obat, o.stok, o.satuan, k.nama_kategori 
+    $query = "SELECT o.*, k.nama_kategori 
               FROM obat o 
               LEFT JOIN kategori_obat k ON o.id_kategori = k.id_kategori";
               

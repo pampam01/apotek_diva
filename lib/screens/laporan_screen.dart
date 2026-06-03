@@ -1,3 +1,4 @@
+import 'package:apotek_diva/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../services/laporan_service.dart';
@@ -24,10 +25,7 @@ class LaporanScreen extends StatelessWidget {
           ),
         ),
         body: const TabBarView(
-          children: [
-            LaporanPenjualanView(),
-            LaporanStokView(),
-          ],
+          children: [LaporanPenjualanView(), LaporanStokView()],
         ),
       ),
     );
@@ -64,7 +62,7 @@ class _LaporanPenjualanViewState extends State<LaporanPenjualanView> {
       final now = DateTime.now();
       final start = DateTime(now.year, now.month, 1).toString().split(' ')[0];
       final end = now.toString().split(' ')[0];
-      
+
       final data = await _laporanService.getLaporanPenjualan(start, end);
       if (mounted) {
         setState(() {
@@ -86,38 +84,138 @@ class _LaporanPenjualanViewState extends State<LaporanPenjualanView> {
   @override
   Widget build(BuildContext context) {
     if (_isLoading) return const LoadingWidget();
-    if (_error != null) return ErrorMessage(message: _error!, onRetry: _loadData);
+    if (_error != null)
+      return ErrorMessage(message: _error!, onRetry: _loadData);
 
-    final currencyFormatter = NumberFormat.currency(locale: 'id_ID', symbol: 'Rp ', decimalDigits: 0);
+    final currencyFormatter = NumberFormat.currency(
+      locale: 'id_ID',
+      symbol: 'Rp ',
+      decimalDigits: 0,
+    );
 
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.all(16),
-          color: Colors.white,
+          margin: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [AppTheme.primaryBlue, Color(0xFF1E88E5)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: AppTheme.primaryBlue.withAlpha(50),
+                blurRadius: 10,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text('Total Pendapatan (Bulan Ini):', style: TextStyle(fontWeight: FontWeight.bold)),
-              Text(
-                currencyFormatter.format(_totalPendapatan),
-                style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Total Pendapatan (Bulan Ini)',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    currencyFormatter.format(_totalPendapatan),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.white.withAlpha(50),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(
+                  Icons.monetization_on,
+                  color: Colors.white,
+                  size: 30,
+                ),
               ),
             ],
           ),
         ),
         Expanded(
-          child: ListView.builder(
-            itemCount: _list.length,
-            itemBuilder: (context, index) {
-              final item = _list[index];
-              return ListTile(
-                title: Text(item.noFaktur),
-                subtitle: Text('${item.tanggalTransaksi} - Kasir: ${item.kasir}'),
-                trailing: Text(currencyFormatter.format(item.totalHarga), style: const TextStyle(fontWeight: FontWeight.bold)),
-              );
-            },
-          ),
+          child: _list.isEmpty
+              ? const Center(child: Text('Tidak ada data penjualan bulan ini'))
+              : ListView.builder(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  itemCount: _list.length,
+                  itemBuilder: (context, index) {
+                    final item = _list[index];
+                    return Card(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      elevation: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                color: AppTheme.primaryBlue.withAlpha(25),
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(
+                                Icons.receipt_long,
+                                color: AppTheme.primaryBlue,
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    item.noFaktur,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    '${item.tanggalTransaksi} • Kasir: ${item.kasir}',
+                                    style: const TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Text(
+                              currencyFormatter.format(item.totalHarga),
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: AppTheme.primaryGreen,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
         ),
       ],
     );
@@ -171,36 +269,115 @@ class _LaporanStokViewState extends State<LaporanStokView> {
   @override
   Widget build(BuildContext context) {
     if (_isLoading) return const LoadingWidget();
-    if (_error != null) return ErrorMessage(message: _error!, onRetry: _loadData);
+    if (_error != null)
+      return ErrorMessage(message: _error!, onRetry: _loadData);
 
     return Column(
       children: [
-        SwitchListTile(
-          title: const Text('Tampilkan Semua Obat (Tidak Hanya Stok Menipis)'),
-          value: _showAll,
-          onChanged: (val) {
-            setState(() => _showAll = val);
-            _loadData();
-          },
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          child: Card(
+            elevation: 0,
+            color: AppTheme.lightGray,
+            child: SwitchListTile(
+              title: const Text(
+                'Tampilkan Semua Obat',
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+              ),
+              subtitle: const Text(
+                'Menampilkan seluruh katalog obat jika diaktifkan',
+              ),
+              value: _showAll,
+              activeColor: AppTheme.primaryBlue,
+              onChanged: (val) {
+                setState(() => _showAll = val);
+                _loadData();
+              },
+            ),
+          ),
         ),
         Expanded(
-          child: ListView.builder(
-            itemCount: _list.length,
-            itemBuilder: (context, index) {
-              final obat = _list[index];
-              return ListTile(
-                title: Text(obat.namaObat),
-                subtitle: Text('Kategori: ${obat.namaKategori ?? '-'}'),
-                trailing: Text(
-                  'Stok: ${obat.stok} ${obat.satuan}',
-                  style: TextStyle(
-                    color: obat.stok < 10 ? Colors.red : Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+          child: _list.isEmpty
+              ? const Center(child: Text('Tidak ada obat dengan stok menipis'))
+              : ListView.builder(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  itemCount: _list.length,
+                  itemBuilder: (context, index) {
+                    final obat = _list[index];
+                    final isLowStock = obat.stok < 10;
+                    return Card(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      elevation: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                color: isLowStock
+                                    ? AppTheme.errorRed.withAlpha(25)
+                                    : AppTheme.primaryGreen.withAlpha(25),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.medication,
+                                color: isLowStock
+                                    ? AppTheme.errorRed
+                                    : AppTheme.primaryGreen,
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    obat.namaObat,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    'Kategori: ${obat.namaKategori ?? '-'} • Kode: ${obat.kodeObat}',
+                                    style: const TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 6,
+                              ),
+                              decoration: BoxDecoration(
+                                color: isLowStock
+                                    ? AppTheme.errorRed.withAlpha(25)
+                                    : AppTheme.primaryGreen.withAlpha(25),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Text(
+                                '${obat.stok} ${obat.satuan}',
+                                style: TextStyle(
+                                  color: isLowStock
+                                      ? AppTheme.errorRed
+                                      : AppTheme.primaryGreen,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                 ),
-              );
-            },
-          ),
         ),
       ],
     );

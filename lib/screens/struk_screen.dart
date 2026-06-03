@@ -44,12 +44,9 @@ class StrukScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               CustomButton(
-                text: 'Kembali ke Dashboard',
+                text: 'Kembali ke Menu Utama',
                 onPressed: () {
-                  Navigator.pop(context); // Pop Struk
-                  Navigator.pop(context); // Pop Transaksi confirmation if any
-                  // Depending on navigation stack, we might just want to pop until first
-                  Navigator.of(context).popUntil((route) => route.isFirst);
+                  Navigator.pop(context); // Hanya pop StrukScreen untuk kembali ke tab menu utama
                 },
               ),
             ],

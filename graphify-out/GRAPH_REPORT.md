@@ -1,13 +1,18 @@
 # Graph Report - apotek_diva  (2026-06-03)
 
 ## Corpus Check
-- 89 files · ~23,847 words
+- 89 files · ~24,152 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 466 nodes · 441 edges · 74 communities (57 shown, 17 thin omitted)
+- 469 nodes · 444 edges · 74 communities (57 shown, 17 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `1d2d2a34`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]
@@ -151,8 +156,8 @@ Cohesion: 0.07
 Nodes (27): ../models/obat_model.dart, ../models/transaksi_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/obat_service.dart, ../theme/app_theme.dart, ../widgets/custom_button.dart, ../models/detail_transaksi_model.dart (+19 more)
 
 ### Community 25 - "Community 25"
-Cohesion: 0.11
-Nodes (18): ../models/laporan_model.dart, ../models/obat_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, build (+10 more)
+Cohesion: 0.10
+Nodes (20): ../models/laporan_model.dart, ../models/obat_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, build (+12 more)
 
 ### Community 26 - "Community 26"
 Cohesion: 0.11
@@ -164,7 +169,7 @@ Nodes (15): form_obat_screen.dart, ../models/obat_model.dart, package:flutter/ma
 
 ### Community 28 - "Community 28"
 Cohesion: 0.12
-Nodes (15): ../models/laporan_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../theme/app_theme.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, build (+7 more)
+Nodes (16): ../models/laporan_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../theme/app_theme.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, login_screen.dart (+8 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.12
@@ -235,7 +240,7 @@ Cohesion: 0.50
 Nodes (3): package:flutter/material.dart, AppTheme, ThemeData
 
 ## Knowledge Gaps
-- **298 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+293 more)
+- **301 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+296 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -245,7 +250,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `OnCreate()` connect `Community 0` to `Community 2`, `Community 45`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger` to the rest of the system?**
-  _299 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _302 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.09388335704125178 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
@@ -255,4 +260,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Community 24` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
 - **Should `Community 25` be split into smaller, more focused modules?**
-  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._

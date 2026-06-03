@@ -804,6 +804,15 @@
       "norm_label": "../theme/app_theme.dart"
     },
     {
+      "label": "login_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/dashboard_screen.dart",
+      "source_location": null,
+      "id": "login_screen_dart",
+      "community": 28,
+      "norm_label": "login_screen.dart"
+    },
+    {
       "label": "form_obat_screen.dart",
       "file_type": "code",
       "source_file": "lib/screens/form_obat_screen.dart",
@@ -1020,13 +1029,22 @@
       "norm_label": "text"
     },
     {
-      "label": "ListTile",
+      "label": "SizedBox",
       "file_type": "code",
       "source_file": "lib/screens/laporan_screen.dart",
       "source_location": null,
-      "id": "screens_laporan_screen_listtile",
+      "id": "screens_laporan_screen_sizedbox",
       "community": 25,
-      "norm_label": "listtile"
+      "norm_label": "sizedbox"
+    },
+    {
+      "label": "Card",
+      "file_type": "code",
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "id": "screens_laporan_screen_card",
+      "community": 25,
+      "norm_label": "card"
     },
     {
       "label": "package:flutter/material.dart",
@@ -4169,6 +4187,15 @@
       "norm_label": "launch screen assets"
     },
     {
+      "label": "ListTile",
+      "file_type": "code",
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "community": 25,
+      "norm_label": "listtile",
+      "id": "screens_laporan_screen_listtile"
+    },
+    {
       "label": "MyHomePage",
       "file_type": "code",
       "source_file": "lib/main.dart",
@@ -4863,6 +4890,16 @@
       "target": "lib_screens_dashboard_screen_dart_widgets_loading_widget_dart"
     },
     {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/dashboard_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_dashboard_screen_dart",
+      "target": "login_screen_dart"
+    },
+    {
       "relation": "defines",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -5150,6 +5187,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_screens_laporan_screen_dart",
+      "target": "screens_laporan_screen_card"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_laporan_screen_dart",
       "target": "screens_laporan_screen_column"
     },
     {
@@ -5231,6 +5278,16 @@
       "weight": 1.0,
       "source": "lib_screens_laporan_screen_dart",
       "target": "screens_laporan_screen_listtile"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_laporan_screen_dart",
+      "target": "screens_laporan_screen_sizedbox"
     },
     {
       "relation": "defines",
@@ -8732,5 +8789,6 @@
       "target": "launchimage_imageset_readme_launch_screen_assets"
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "1d2d2a3480ec8174612db6718050e3ec7fb7d26b"
 }
