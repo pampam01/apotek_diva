@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $total_penjualan = $res_penjualan->fetch_assoc()['total_penjualan'] ?? 0;
     
     // Total Obat (Jenis Obat)
-    $stmt_obat = $conn->query("SELECT COUNT(id_obat) as total_obat FROM obat");
+    $stmt_obat = $conn->query("SELECT COUNT(id_obat) as total_obat FROM obat WHERE is_deleted = 0");
     $total_obat = $stmt_obat->fetch_assoc()['total_obat'] ?? 0;
     
     // Obat Hampir Habis (stok < 10)
-    $stmt_stok = $conn->query("SELECT COUNT(id_obat) as obat_hampir_habis FROM obat WHERE stok < 10");
+    $stmt_stok = $conn->query("SELECT COUNT(id_obat) as obat_hampir_habis FROM obat WHERE stok < 10 AND is_deleted = 0");
     $obat_hampir_habis = $stmt_stok->fetch_assoc()['obat_hampir_habis'] ?? 0;
     
     // Total Transaksi Bulan Ini

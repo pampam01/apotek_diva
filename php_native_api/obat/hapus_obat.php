@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($data->id_obat)) {
         $id_obat = $data->id_obat;
         
-        $stmt = $conn->prepare("DELETE FROM obat WHERE id_obat = ?");
+        $stmt = $conn->prepare("UPDATE obat SET is_deleted = 1 WHERE id_obat = ?");
         $stmt->bind_param("i", $id_obat);
         
         if ($stmt->execute()) {

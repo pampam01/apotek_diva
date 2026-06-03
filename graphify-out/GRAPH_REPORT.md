@@ -1,23 +1,22 @@
 # Graph Report - apotek_diva  (2026-06-03)
 
 ## Corpus Check
-- 89 files · ~24,152 words
+- 89 files · ~25,272 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 469 nodes · 444 edges · 74 communities (57 shown, 17 thin omitted)
+- 489 nodes · 464 edges · 73 communities (56 shown, 17 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1d2d2a34`
+- Built from commit: `0d7e6dc7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]
 - [[_COMMUNITY_Community 1|Community 1]]
-- [[_COMMUNITY_Community 2|Community 2]]
 - [[_COMMUNITY_Community 3|Community 3]]
 - [[_COMMUNITY_Community 4|Community 4]]
 - [[_COMMUNITY_Community 5|Community 5]]
@@ -93,7 +92,7 @@
 - `OnCreate()` --calls--> `GetClientArea()`  [INFERRED]
   windows/runner/flutter_window.cpp → windows/runner/win32_window.cpp
 
-## Communities (74 total, 17 thin omitted)
+## Communities (73 total, 17 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.09
@@ -103,21 +102,17 @@ Nodes (32): Point, RECT, OnCreate(), Create(), Destroy(), EnableFullDpiSupportIf
 Cohesion: 0.10
 Nodes (20): FlPluginRegistry, fl_register_plugins(), GApplication, gboolean, gchar, GObject, GtkApplication, MyApplicationClass (+12 more)
 
-### Community 2 - "Community 2"
-Cohesion: 0.20
-Nodes (8): DartProject, MessageHandler(), HWND, LPARAM, LRESULT, FlutterWindow(), UINT, WPARAM
-
 ### Community 3 - "Community 3"
-Cohesion: 0.18
-Nodes (11): class, _In_, _In_opt_, wWinMain(), CreateAndAttachConsole(), GetCommandLineArguments(), Utf8FromUtf16(), string (+3 more)
+Cohesion: 0.10
+Nodes (19): class, DartProject, _In_, _In_opt_, MessageHandler(), wWinMain(), CreateAndAttachConsole(), GetCommandLineArguments() (+11 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.18
 Nodes (8): Any, FlutterAppDelegate, Bool, AppDelegate, Bool, AppDelegate, NSApplication, UIApplication
 
 ### Community 5 - "Community 5"
-Cohesion: 0.13
-Nodes (14): build, package:flutter/material.dart, _incrementCounter, initializeDateFormatting, main, MaterialApp, MyApp, MyHomePage (+6 more)
+Cohesion: 0.12
+Nodes (15): build, package:apotek_diva/theme/app_theme.dart, package:flutter/material.dart, _incrementCounter, initializeDateFormatting, main, MaterialApp, MyApp (+7 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.18
@@ -152,16 +147,16 @@ Cohesion: 0.40
 Nodes (4): package:apotek_diva/main.dart, package:flutter_test/flutter_test.dart, package:flutter/material.dart, main
 
 ### Community 24 - "Community 24"
-Cohesion: 0.07
-Nodes (27): ../models/obat_model.dart, ../models/transaksi_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/obat_service.dart, ../theme/app_theme.dart, ../widgets/custom_button.dart, ../models/detail_transaksi_model.dart (+19 more)
+Cohesion: 0.06
+Nodes (33): ../models/detail_transaksi_model.dart, ../models/obat_model.dart, ../models/transaksi_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/obat_service.dart, ../services/transaksi_service.dart, struk_screen.dart (+25 more)
 
 ### Community 25 - "Community 25"
-Cohesion: 0.10
-Nodes (20): ../models/laporan_model.dart, ../models/obat_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, build (+12 more)
+Cohesion: 0.08
+Nodes (25): ../models/laporan_model.dart, ../models/obat_model.dart, package:apotek_diva/theme/app_theme.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../services/transaksi_service.dart, struk_screen.dart (+17 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.11
-Nodes (17): ../models/user_model.dart, package:flutter/material.dart, ../theme/app_theme.dart, ../screens/dashboard_screen.dart, ../screens/laporan_screen.dart, ../screens/stok_obat_screen.dart, ../screens/transaksi_screen.dart, BottomNav (+9 more)
+Cohesion: 0.10
+Nodes (19): ../models/user_model.dart, package:flutter/material.dart, ../theme/app_theme.dart, ../screens/dashboard_screen.dart, ../screens/laporan_screen.dart, ../screens/stok_obat_screen.dart, ../screens/transaksi_screen.dart, BottomNav (+11 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.12
@@ -180,8 +175,8 @@ Cohesion: 0.15
 Nodes (12): ../models/obat_model.dart, package:flutter/material.dart, ../services/obat_service.dart, ../widgets/custom_button.dart, ../widgets/custom_text_field.dart, build, FormObatScreen, _FormObatScreenState (+4 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.18
-Nodes (10): package:flutter/material.dart, ../theme/app_theme.dart, ../widgets/custom_button.dart, build, Icon, Scaffold, SizedBox, SnackBar (+2 more)
+Cohesion: 0.12
+Nodes (16): ../models/detail_transaksi_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../theme/app_theme.dart, ../widgets/custom_button.dart, AlertDialog, build, Center (+8 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.22
@@ -240,24 +235,24 @@ Cohesion: 0.50
 Nodes (3): package:flutter/material.dart, AppTheme, ThemeData
 
 ## Knowledge Gaps
-- **301 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+296 more)
+- **321 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+316 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `OnCreate()` connect `Community 0` to `Community 2`, `Community 45`?**
+- **Why does `OnCreate()` connect `Community 0` to `Community 3`, `Community 45`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger` to the rest of the system?**
-  _302 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _322 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.09388335704125178 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.09846153846153846 - nodes in this community are weakly interconnected._
 - **Should `Community 5` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Community 24` be split into smaller, more focused modules?**
-  _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
-- **Should `Community 25` be split into smaller, more focused modules?**
-  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._

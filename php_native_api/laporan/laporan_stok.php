@@ -7,10 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     
     $query = "SELECT o.*, k.nama_kategori 
               FROM obat o 
-              LEFT JOIN kategori_obat k ON o.id_kategori = k.id_kategori";
+              LEFT JOIN kategori_obat k ON o.id_kategori = k.id_kategori
+              WHERE o.is_deleted = 0";
               
     if ($show_all == 0) {
-        $query .= " WHERE o.stok < 10";
+        $query .= " AND o.stok < 10";
     }
     
     $query .= " ORDER BY o.stok ASC";

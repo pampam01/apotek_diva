@@ -4,6 +4,8 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 header("Content-Type: application/json; charset=UTF-8");
 
+mysqli_report(MYSQLI_REPORT_OFF); // Prevent PHP 8.1+ from throwing uncaught exceptions on SQL errors
+
 $host = "localhost";
 $user = "root"; // Sesuaikan jika menggunakan InfinityFree
 $pass = ""; // Sesuaikan jika menggunakan InfinityFree

@@ -484,7 +484,7 @@
       "file_type": "code",
       "source_file": "lib/main.dart",
       "source_location": null,
-      "id": "package_apotek_diva_theme_app_theme_dart",
+      "id": "lib_main_dart_package_apotek_diva_theme_app_theme_dart",
       "community": 5,
       "norm_label": "package:apotek_diva/theme/app_theme.dart"
     },
@@ -1011,6 +1011,24 @@
       "norm_label": "initstate"
     },
     {
+      "label": "_reprintStruk",
+      "file_type": "code",
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "id": "screens_laporan_screen_reprintstruk",
+      "community": 25,
+      "norm_label": "_reprintstruk"
+    },
+    {
+      "label": "ErrorMessage",
+      "file_type": "code",
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "id": "screens_laporan_screen_errormessage",
+      "community": 25,
+      "norm_label": "errormessage"
+    },
+    {
       "label": "Column",
       "file_type": "code",
       "source_file": "lib/screens/laporan_screen.dart",
@@ -1045,6 +1063,15 @@
       "id": "screens_laporan_screen_card",
       "community": 25,
       "norm_label": "card"
+    },
+    {
+      "label": "package:apotek_diva/theme/app_theme.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "id": "lib_screens_laporan_screen_dart_package_apotek_diva_theme_app_theme_dart",
+      "community": 25,
+      "norm_label": "package:apotek_diva/theme/app_theme.dart"
     },
     {
       "label": "package:flutter/material.dart",
@@ -1108,6 +1135,24 @@
       "id": "lib_screens_laporan_screen_dart_widgets_error_message_dart",
       "community": 25,
       "norm_label": "../widgets/error_message.dart"
+    },
+    {
+      "label": "../services/transaksi_service.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "id": "lib_screens_laporan_screen_dart_services_transaksi_service_dart",
+      "community": 25,
+      "norm_label": "../services/transaksi_service.dart"
+    },
+    {
+      "label": "struk_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "id": "lib_screens_laporan_screen_dart_struk_screen_dart",
+      "community": 25,
+      "norm_label": "struk_screen.dart"
     },
     {
       "label": "login_screen.dart",
@@ -1416,6 +1461,33 @@
       "norm_label": "strukscreen"
     },
     {
+      "label": "_simulasikanCetak",
+      "file_type": "code",
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "id": "screens_struk_screen_simulasikancetak",
+      "community": 31,
+      "norm_label": "_simulasikancetak"
+    },
+    {
+      "label": "AlertDialog",
+      "file_type": "code",
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "id": "screens_struk_screen_alertdialog",
+      "community": 31,
+      "norm_label": "alertdialog"
+    },
+    {
+      "label": "SnackBar",
+      "file_type": "code",
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "id": "screens_struk_screen_snackbar",
+      "community": 31,
+      "norm_label": "snackbar"
+    },
+    {
       "label": "build",
       "file_type": "code",
       "source_file": "lib/screens/struk_screen.dart",
@@ -1461,13 +1533,22 @@
       "norm_label": "text"
     },
     {
-      "label": "SnackBar",
+      "label": "Center",
       "file_type": "code",
       "source_file": "lib/screens/struk_screen.dart",
       "source_location": null,
-      "id": "screens_struk_screen_snackbar",
+      "id": "screens_struk_screen_center",
       "community": 31,
-      "norm_label": "snackbar"
+      "norm_label": "center"
+    },
+    {
+      "label": "Padding",
+      "file_type": "code",
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "id": "screens_struk_screen_padding",
+      "community": 31,
+      "norm_label": "padding"
     },
     {
       "label": "package:flutter/material.dart",
@@ -1477,6 +1558,24 @@
       "id": "lib_screens_struk_screen_dart_package_flutter_material_dart",
       "community": 31,
       "norm_label": "package:flutter/material.dart"
+    },
+    {
+      "label": "package:intl/intl.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "id": "lib_screens_struk_screen_dart_package_intl_intl_dart",
+      "community": 31,
+      "norm_label": "package:intl/intl.dart"
+    },
+    {
+      "label": "../models/detail_transaksi_model.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "id": "lib_screens_struk_screen_dart_models_detail_transaksi_model_dart",
+      "community": 31,
+      "norm_label": "../models/detail_transaksi_model.dart"
     },
     {
       "label": "../theme/app_theme.dart",
@@ -1632,13 +1731,13 @@
       "norm_label": "scaffold"
     },
     {
-      "label": "ListTile",
+      "label": "Icon",
       "file_type": "code",
       "source_file": "lib/screens/transaksi_screen.dart",
       "source_location": null,
-      "id": "screens_transaksi_screen_listtile",
+      "id": "screens_transaksi_screen_icon",
       "community": 24,
-      "norm_label": "listtile"
+      "norm_label": "icon"
     },
     {
       "label": "Card",
@@ -1648,6 +1747,24 @@
       "id": "screens_transaksi_screen_card",
       "community": 24,
       "norm_label": "card"
+    },
+    {
+      "label": "Expanded",
+      "file_type": "code",
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "id": "screens_transaksi_screen_expanded",
+      "community": 24,
+      "norm_label": "expanded"
+    },
+    {
+      "label": "Divider",
+      "file_type": "code",
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "id": "screens_transaksi_screen_divider",
+      "community": 24,
+      "norm_label": "divider"
     },
     {
       "label": "Text",
@@ -1699,7 +1816,7 @@
       "file_type": "code",
       "source_file": "lib/screens/transaksi_screen.dart",
       "source_location": null,
-      "id": "models_detail_transaksi_model_dart",
+      "id": "lib_screens_transaksi_screen_dart_models_detail_transaksi_model_dart",
       "community": 24,
       "norm_label": "../models/detail_transaksi_model.dart"
     },
@@ -1717,7 +1834,7 @@
       "file_type": "code",
       "source_file": "lib/screens/transaksi_screen.dart",
       "source_location": null,
-      "id": "services_transaksi_service_dart",
+      "id": "lib_screens_transaksi_screen_dart_services_transaksi_service_dart",
       "community": 24,
       "norm_label": "../services/transaksi_service.dart"
     },
@@ -1735,7 +1852,7 @@
       "file_type": "code",
       "source_file": "lib/screens/transaksi_screen.dart",
       "source_location": null,
-      "id": "struk_screen_dart",
+      "id": "lib_screens_transaksi_screen_dart_struk_screen_dart",
       "community": 24,
       "norm_label": "struk_screen.dart"
     },
@@ -2145,40 +2262,13 @@
       "norm_label": "initstate"
     },
     {
-      "label": "DashboardScreen",
+      "label": "_buildMenu",
       "file_type": "code",
       "source_file": "lib/widgets/bottom_nav.dart",
       "source_location": null,
-      "id": "widgets_bottom_nav_dashboardscreen",
+      "id": "widgets_bottom_nav_buildmenu",
       "community": 26,
-      "norm_label": "dashboardscreen"
-    },
-    {
-      "label": "StokObatScreen",
-      "file_type": "code",
-      "source_file": "lib/widgets/bottom_nav.dart",
-      "source_location": null,
-      "id": "widgets_bottom_nav_stokobatscreen",
-      "community": 26,
-      "norm_label": "stokobatscreen"
-    },
-    {
-      "label": "TransaksiScreen",
-      "file_type": "code",
-      "source_file": "lib/widgets/bottom_nav.dart",
-      "source_location": null,
-      "id": "widgets_bottom_nav_transaksiscreen",
-      "community": 26,
-      "norm_label": "transaksiscreen"
-    },
-    {
-      "label": "LaporanScreen",
-      "file_type": "code",
-      "source_file": "lib/widgets/bottom_nav.dart",
-      "source_location": null,
-      "id": "widgets_bottom_nav_laporanscreen",
-      "community": 26,
-      "norm_label": "laporanscreen"
+      "norm_label": "_buildmenu"
     },
     {
       "label": "_onItemTapped",
@@ -2188,6 +2278,24 @@
       "id": "widgets_bottom_nav_onitemtapped",
       "community": 26,
       "norm_label": "_onitemtapped"
+    },
+    {
+      "label": "_getActiveScreen",
+      "file_type": "code",
+      "source_file": "lib/widgets/bottom_nav.dart",
+      "source_location": null,
+      "id": "widgets_bottom_nav_getactivescreen",
+      "community": 26,
+      "norm_label": "_getactivescreen"
+    },
+    {
+      "label": "DashboardScreen",
+      "file_type": "code",
+      "source_file": "lib/widgets/bottom_nav.dart",
+      "source_location": null,
+      "id": "widgets_bottom_nav_dashboardscreen",
+      "community": 26,
+      "norm_label": "dashboardscreen"
     },
     {
       "label": "build",
@@ -3481,7 +3589,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L1",
       "id": "windows_runner_flutter_window_cpp",
-      "community": 2,
+      "community": 3,
       "norm_label": "flutter_window.cpp"
     },
     {
@@ -3490,7 +3598,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L7",
       "id": "windows_runner_flutter_window_cpp_runner_flutter_window_flutterwindow",
-      "community": 2,
+      "community": 3,
       "norm_label": "flutterwindow()"
     },
     {
@@ -3499,7 +3607,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L7",
       "id": "dartproject",
-      "community": 2,
+      "community": 3,
       "norm_label": "dartproject"
     },
     {
@@ -3517,7 +3625,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L42",
       "id": "runner_flutter_window_ondestroy",
-      "community": 2,
+      "community": 3,
       "norm_label": "ondestroy()"
     },
     {
@@ -3526,7 +3634,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L50",
       "id": "runner_flutter_window_messagehandler",
-      "community": 2,
+      "community": 3,
       "norm_label": "messagehandler()"
     },
     {
@@ -3535,7 +3643,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L50",
       "id": "windows_runner_flutter_window_cpp_lresult",
-      "community": 2,
+      "community": 3,
       "norm_label": "lresult"
     },
     {
@@ -3544,7 +3652,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L50",
       "id": "windows_runner_flutter_window_cpp_hwnd",
-      "community": 2,
+      "community": 3,
       "norm_label": "hwnd"
     },
     {
@@ -3553,7 +3661,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L50",
       "id": "windows_runner_flutter_window_cpp_uint",
-      "community": 2,
+      "community": 3,
       "norm_label": "uint"
     },
     {
@@ -3562,7 +3670,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L50",
       "id": "windows_runner_flutter_window_cpp_wparam",
-      "community": 2,
+      "community": 3,
       "norm_label": "wparam"
     },
     {
@@ -3571,7 +3679,7 @@
       "source_file": "windows/runner/flutter_window.cpp",
       "source_location": "L50",
       "id": "windows_runner_flutter_window_cpp_lparam",
-      "community": 2,
+      "community": 3,
       "norm_label": "lparam"
     },
     {
@@ -4189,6 +4297,78 @@
     {
       "label": "ListTile",
       "file_type": "code",
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "community": 24,
+      "norm_label": "listtile",
+      "id": "screens_transaksi_screen_listtile"
+    },
+    {
+      "label": "../services/transaksi_service.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "community": 24,
+      "norm_label": "../services/transaksi_service.dart",
+      "id": "services_transaksi_service_dart"
+    },
+    {
+      "label": "struk_screen.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "community": 24,
+      "norm_label": "struk_screen.dart",
+      "id": "struk_screen_dart"
+    },
+    {
+      "label": "../models/detail_transaksi_model.dart",
+      "file_type": "code",
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "community": 24,
+      "norm_label": "../models/detail_transaksi_model.dart",
+      "id": "models_detail_transaksi_model_dart"
+    },
+    {
+      "label": "package:apotek_diva/theme/app_theme.dart",
+      "file_type": "code",
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "community": 5,
+      "norm_label": "package:apotek_diva/theme/app_theme.dart",
+      "id": "package_apotek_diva_theme_app_theme_dart"
+    },
+    {
+      "label": "StokObatScreen",
+      "file_type": "code",
+      "source_file": "lib/widgets/bottom_nav.dart",
+      "source_location": null,
+      "community": 26,
+      "norm_label": "stokobatscreen",
+      "id": "widgets_bottom_nav_stokobatscreen"
+    },
+    {
+      "label": "TransaksiScreen",
+      "file_type": "code",
+      "source_file": "lib/widgets/bottom_nav.dart",
+      "source_location": null,
+      "community": 26,
+      "norm_label": "transaksiscreen",
+      "id": "widgets_bottom_nav_transaksiscreen"
+    },
+    {
+      "label": "LaporanScreen",
+      "file_type": "code",
+      "source_file": "lib/widgets/bottom_nav.dart",
+      "source_location": null,
+      "community": 26,
+      "norm_label": "laporanscreen",
+      "id": "widgets_bottom_nav_laporanscreen"
+    },
+    {
+      "label": "ListTile",
+      "file_type": "code",
       "source_file": "lib/screens/laporan_screen.dart",
       "source_location": null,
       "community": 25,
@@ -4588,6 +4768,16 @@
       "weight": 1.0,
       "source": "lib_main_dart",
       "target": "lib_main_build"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/main.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_main_dart",
+      "target": "lib_main_dart_package_apotek_diva_theme_app_theme_dart"
     },
     {
       "relation": "imports",
@@ -5127,6 +5317,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_screens_laporan_screen_dart",
+      "target": "lib_screens_laporan_screen_dart_package_apotek_diva_theme_app_theme_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_laporan_screen_dart",
       "target": "lib_screens_laporan_screen_dart_package_flutter_material_dart"
     },
     {
@@ -5148,6 +5348,26 @@
       "weight": 1.0,
       "source": "lib_screens_laporan_screen_dart",
       "target": "lib_screens_laporan_screen_dart_services_laporan_service_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_laporan_screen_dart",
+      "target": "lib_screens_laporan_screen_dart_services_transaksi_service_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_laporan_screen_dart",
+      "target": "lib_screens_laporan_screen_dart_struk_screen_dart"
     },
     {
       "relation": "imports",
@@ -5208,6 +5428,16 @@
       "weight": 1.0,
       "source": "lib_screens_laporan_screen_dart",
       "target": "screens_laporan_screen_defaulttabcontroller"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_laporan_screen_dart",
+      "target": "screens_laporan_screen_errormessage"
     },
     {
       "relation": "defines",
@@ -5278,6 +5508,16 @@
       "weight": 1.0,
       "source": "lib_screens_laporan_screen_dart",
       "target": "screens_laporan_screen_listtile"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/laporan_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_laporan_screen_dart",
+      "target": "screens_laporan_screen_reprintstruk"
     },
     {
       "relation": "defines",
@@ -5607,7 +5847,27 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_screens_struk_screen_dart",
+      "target": "lib_screens_struk_screen_dart_models_detail_transaksi_model_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_struk_screen_dart",
       "target": "lib_screens_struk_screen_dart_package_flutter_material_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_struk_screen_dart",
+      "target": "lib_screens_struk_screen_dart_package_intl_intl_dart"
     },
     {
       "relation": "imports",
@@ -5637,7 +5897,27 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_screens_struk_screen_dart",
+      "target": "screens_struk_screen_alertdialog"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_struk_screen_dart",
       "target": "screens_struk_screen_build"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_struk_screen_dart",
+      "target": "screens_struk_screen_center"
     },
     {
       "relation": "defines",
@@ -5657,7 +5937,27 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_screens_struk_screen_dart",
+      "target": "screens_struk_screen_padding"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_struk_screen_dart",
       "target": "screens_struk_screen_scaffold"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/struk_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_struk_screen_dart",
+      "target": "screens_struk_screen_simulasikancetak"
     },
     {
       "relation": "defines",
@@ -5698,6 +5998,16 @@
       "weight": 1.0,
       "source": "lib_screens_struk_screen_dart",
       "target": "screens_struk_screen_text"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_transaksi_screen_dart",
+      "target": "lib_screens_transaksi_screen_dart_models_detail_transaksi_model_dart"
     },
     {
       "relation": "imports",
@@ -5748,6 +6058,26 @@
       "weight": 1.0,
       "source": "lib_screens_transaksi_screen_dart",
       "target": "lib_screens_transaksi_screen_dart_services_obat_service_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_transaksi_screen_dart",
+      "target": "lib_screens_transaksi_screen_dart_services_transaksi_service_dart"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_transaksi_screen_dart",
+      "target": "lib_screens_transaksi_screen_dart_struk_screen_dart"
     },
     {
       "relation": "imports",
@@ -5828,6 +6158,36 @@
       "weight": 1.0,
       "source": "lib_screens_transaksi_screen_dart",
       "target": "screens_transaksi_screen_decrementcartitem"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_transaksi_screen_dart",
+      "target": "screens_transaksi_screen_divider"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_transaksi_screen_dart",
+      "target": "screens_transaksi_screen_expanded"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/screens/transaksi_screen.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_screens_transaksi_screen_dart",
+      "target": "screens_transaksi_screen_icon"
     },
     {
       "relation": "defines",
@@ -6417,7 +6777,27 @@
       "source_location": null,
       "weight": 1.0,
       "source": "lib_widgets_bottom_nav_dart",
+      "target": "widgets_bottom_nav_buildmenu"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/widgets/bottom_nav.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_widgets_bottom_nav_dart",
       "target": "widgets_bottom_nav_dashboardscreen"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/widgets/bottom_nav.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_widgets_bottom_nav_dart",
+      "target": "widgets_bottom_nav_getactivescreen"
     },
     {
       "relation": "defines",
@@ -8790,5 +9170,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1d2d2a3480ec8174612db6718050e3ec7fb7d26b"
+  "built_at_commit": "0d7e6dc77f3a6c252e6ac38dc5ff2f6283761069"
 }

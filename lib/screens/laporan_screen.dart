@@ -6,6 +6,8 @@ import '../models/laporan_model.dart';
 import '../models/obat_model.dart';
 import '../widgets/loading_widget.dart';
 import '../widgets/error_message.dart';
+import '../services/transaksi_service.dart';
+import 'struk_screen.dart';
 
 class LaporanScreen extends StatelessWidget {
   const LaporanScreen({super.key});
@@ -18,6 +20,9 @@ class LaporanScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Laporan'),
           bottom: const TabBar(
+            labelColor: Colors.white,
+            unselectedLabelColor: Colors.white70,
+            indicatorColor: Colors.white,
             tabs: [
               Tab(text: 'Penjualan'),
               Tab(text: 'Stok Obat'),
@@ -81,11 +86,46 @@ class _LaporanPenjualanViewState extends State<LaporanPenjualanView> {
     }
   }
 
+  void _reprintStruk(LaporanPenjualanModel item) async {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => const Center(child: CircularProgressIndicator()),
+    );
+    
+    try {
+      final detail = await TransaksiService().getDetailTransaksi(item.idTransaksi);
+      if (context.mounted) {
+        Navigator.pop(context); // Close loading dialog
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => StrukScreen(
+              noFaktur: detail.noFaktur,
+              items: detail.items ?? [],
+              totalHarga: detail.totalHarga,
+              jumlahBayar: detail.jumlahBayar,
+              kembalian: detail.kembalian,
+            ),
+          ),
+        );
+      }
+    } catch (e) {
+      if (context.mounted) {
+        Navigator.pop(context); // Close loading
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Gagal mengambil detail transaksi: $e')),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_isLoading) return const LoadingWidget();
-    if (_error != null)
+    if (_error != null) {
       return ErrorMessage(message: _error!, onRetry: _loadData);
+    }
 
     final currencyFormatter = NumberFormat.currency(
       locale: 'id_ID',
@@ -202,13 +242,26 @@ class _LaporanPenjualanViewState extends State<LaporanPenjualanView> {
                                 ],
                               ),
                             ),
-                            Text(
-                              currencyFormatter.format(item.totalHarga),
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: AppTheme.primaryGreen,
-                                fontSize: 16,
-                              ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  currencyFormatter.format(item.totalHarga),
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: AppTheme.primaryGreen,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                IconButton(
+                                  icon: const Icon(Icons.print, color: Colors.orange, size: 20),
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints(),
+                                  onPressed: () => _reprintStruk(item),
+                                  tooltip: 'Cetak Ulang Struk',
+                                ),
+                              ],
                             ),
                           ],
                         ),

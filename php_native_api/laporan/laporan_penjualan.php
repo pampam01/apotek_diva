@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $start_date = isset($_GET['start_date']) ? $_GET['start_date'] : date('Y-m-01'); // Default awal bulan
     $end_date = isset($_GET['end_date']) ? $_GET['end_date'] : date('Y-m-d'); // Default hari ini
     
-    $query = "SELECT t.no_faktur, t.tanggal_transaksi, t.total_harga, u.nama_lengkap as kasir 
+    $query = "SELECT t.id_transaksi, t.no_faktur, t.tanggal_transaksi, t.total_harga, t.jumlah_bayar, t.kembalian, u.nama_lengkap as kasir 
               FROM transaksi t 
               JOIN users u ON t.id_user = u.id_user 
               WHERE DATE(t.tanggal_transaksi) BETWEEN ? AND ?

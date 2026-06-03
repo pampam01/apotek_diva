@@ -17,18 +17,49 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int _selectedIndex = 0;
-  
-  late final List<Widget> _screens;
+  final List<Widget> _screens = [];
+  final List<BottomNavigationBarItem> _navItems = [];
 
   @override
   void initState() {
     super.initState();
-    _screens = [
-      const DashboardScreen(),
-      const StokObatScreen(),
-      const TransaksiScreen(),
-      const LaporanScreen(),
-    ];
+    _buildMenu();
+  }
+
+  void _buildMenu() {
+    final role = widget.user.role.toLowerCase();
+    
+    // Dashboard (Admin & Kasir)
+    _screens.add(const DashboardScreen());
+    _navItems.add(const BottomNavigationBarItem(
+      icon: Icon(Icons.dashboard),
+      label: 'Dashboard',
+    ));
+
+    // Stok Obat (Hanya Admin)
+    if (role == 'admin') {
+      _screens.add(const StokObatScreen());
+      _navItems.add(const BottomNavigationBarItem(
+        icon: Icon(Icons.inventory),
+        label: 'Stok',
+      ));
+    }
+
+    // Transaksi POS (Admin & Kasir)
+    _screens.add(const TransaksiScreen());
+    _navItems.add(const BottomNavigationBarItem(
+      icon: Icon(Icons.point_of_sale),
+      label: 'Transaksi',
+    ));
+
+    // Laporan Keuangan (Hanya Admin)
+    if (role == 'admin') {
+      _screens.add(const LaporanScreen());
+      _navItems.add(const BottomNavigationBarItem(
+        icon: Icon(Icons.bar_chart),
+        label: 'Laporan',
+      ));
+    }
   }
 
   void _onItemTapped(int index) {
@@ -37,34 +68,35 @@ class _BottomNavState extends State<BottomNav> {
     });
   }
 
+  Widget _getActiveScreen() {
+    final role = widget.user.role.toLowerCase();
+    if (role == 'admin') {
+      switch (_selectedIndex) {
+        case 0: return const DashboardScreen();
+        case 1: return const StokObatScreen();
+        case 2: return const TransaksiScreen();
+        case 3: return const LaporanScreen();
+      }
+    } else {
+      switch (_selectedIndex) {
+        case 0: return const DashboardScreen();
+        case 1: return const TransaksiScreen();
+      }
+    }
+    return const DashboardScreen();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_selectedIndex],
+      body: _getActiveScreen(),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         selectedItemColor: AppTheme.primaryBlue,
         unselectedItemColor: AppTheme.textSecondary,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard),
-            label: 'Dashboard',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.inventory),
-            label: 'Stok',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.point_of_sale),
-            label: 'Transaksi',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bar_chart),
-            label: 'Laporan',
-          ),
-        ],
+        items: _navItems,
       ),
     );
   }

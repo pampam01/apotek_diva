@@ -210,13 +210,23 @@ class _TransaksiScreenState extends State<TransaksiScreen> {
                             
                             if (context.mounted) {
                               Navigator.pop(context); // Close dialog
+                              final cartCopy = List<DetailTransaksiModel>.from(_cart);
+                              final finalTotal = _totalHarga;
                               setState(() {
                                 _cart.clear();
                                 _bayarController.clear();
                               });
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => StrukScreen(transaksiResult: result)),
+                                MaterialPageRoute(
+                                  builder: (context) => StrukScreen(
+                                    noFaktur: result['no_faktur'] ?? 'TRX-UNKNOWN',
+                                    items: cartCopy,
+                                    totalHarga: finalTotal,
+                                    jumlahBayar: bayar,
+                                    kembalian: kembalian,
+                                  ),
+                                ),
                               );
                             }
                           } catch (e) {
@@ -243,14 +253,17 @@ class _TransaksiScreenState extends State<TransaksiScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Point of Sale (POS)')),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          // Input Pencarian
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
-                labelText: 'Cari Obat',
-                prefixIcon: const Icon(Icons.search),
+                labelText: 'Cari Obat di Katalog',
+                hintText: 'Masukkan nama atau kode obat...',
+                prefixIcon: const Icon(Icons.search, color: AppTheme.primaryBlue),
                 suffixIcon: _isLoadingSearch
                     ? const Padding(padding: EdgeInsets.all(12.0), child: CircularProgressIndicator(strokeWidth: 2))
                     : null,
@@ -258,67 +271,182 @@ class _TransaksiScreenState extends State<TransaksiScreen> {
               onChanged: _searchObat,
             ),
           ),
+          
+          // Katalog Obat (Daftar Pencarian)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
+                const Icon(Icons.apps, color: AppTheme.primaryBlue, size: 20),
+                const SizedBox(width: 8),
+                Text(
+                  'Katalog Obat',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
           if (_searchResults.isNotEmpty)
             Expanded(
+              flex: 3,
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: _searchResults.length,
+                itemBuilder: (context, index) {
+                  final obat = _searchResults[index];
+                  final outOfStock = obat.stok <= 0;
+                  return Card(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    elevation: 1,
+                    child: ListTile(
+                      leading: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: outOfStock ? AppTheme.errorRed.withAlpha(25) : AppTheme.primaryBlue.withAlpha(25),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.medication,
+                          color: outOfStock ? AppTheme.errorRed : AppTheme.primaryBlue,
+                        ),
+                      ),
+                      title: Text(obat.namaObat, style: const TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Text(
+                        'Kode: ${obat.kodeObat} • Stok: ${obat.stok} ${obat.satuan}',
+                        style: TextStyle(color: outOfStock ? AppTheme.errorRed : Colors.grey.shade600),
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            currencyFormatter.format(obat.hargaJual),
+                            style: const TextStyle(fontWeight: FontWeight.bold, color: AppTheme.primaryGreen),
+                          ),
+                          const SizedBox(width: 12),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppTheme.primaryBlue,
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                              minimumSize: const Size(60, 32),
+                            ),
+                            onPressed: outOfStock ? null : () => _addToCart(obat),
+                            child: const Text('Pilih', style: TextStyle(fontSize: 12)),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            )
+          else
+            const Expanded(
               flex: 1,
-              child: Container(
-                color: AppTheme.lightGray,
-                child: ListView.builder(
-                  itemCount: _searchResults.length,
-                  itemBuilder: (context, index) {
-                    final obat = _searchResults[index];
-                    return ListTile(
-                      title: Text(obat.namaObat),
-                      subtitle: Text('${obat.kodeObat} - Stok: ${obat.stok}'),
-                      trailing: Text(currencyFormatter.format(obat.hargaJual)),
-                      onTap: () => _addToCart(obat),
-                    );
-                  },
-                ),
+              child: Center(
+                child: Text('Katalog kosong. Cari obat di atas...', style: TextStyle(color: Colors.grey)),
               ),
             ),
+
+          const Divider(height: 24, thickness: 1.5),
+
+          // Keranjang Belanja
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const Icon(Icons.shopping_cart, color: AppTheme.primaryGreen, size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Keranjang Belanja',
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                Text(
+                  '${_cart.length} Item',
+                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
           Expanded(
-            flex: 2,
+            flex: 3,
             child: _cart.isEmpty
-                ? const Center(child: Text('Keranjang Kosong'))
+                ? const Center(child: Text('Keranjang masih kosong', style: TextStyle(color: Colors.grey)))
                 : ListView.builder(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     itemCount: _cart.length,
                     itemBuilder: (context, index) {
                       final item = _cart[index];
                       return Card(
-                        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                        child: ListTile(
-                          title: Text(item.namaObat ?? ''),
-                          subtitle: Text('Harga: ${currencyFormatter.format(item.hargaSatuan)}'),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
+                        margin: const EdgeInsets.only(bottom: 8),
+                        elevation: 1.5,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Row(
                             children: [
-                              IconButton(
-                                icon: const Icon(Icons.remove_circle_outline, color: AppTheme.primaryBlue, size: 20),
-                                onPressed: () => _decrementCartItem(index),
-                                padding: EdgeInsets.zero,
-                                constraints: const BoxConstraints(),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                                child: Text('${item.jumlah}', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                              ),
-                              IconButton(
-                                icon: const Icon(Icons.add_circle_outline, color: AppTheme.primaryBlue, size: 20),
-                                onPressed: () => _incrementCartItem(index),
-                                padding: EdgeInsets.zero,
-                                constraints: const BoxConstraints(),
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: AppTheme.primaryGreen.withAlpha(25),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: const Icon(Icons.shopping_basket, color: AppTheme.primaryGreen, size: 18),
                               ),
                               const SizedBox(width: 12),
-                              Text(
-                                currencyFormatter.format(item.subtotal),
-                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(item.namaObat ?? '', style: const TextStyle(fontWeight: FontWeight.bold)),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      'Harga: ${currencyFormatter.format(item.hargaSatuan)}',
+                                      style: const TextStyle(color: Colors.grey, fontSize: 12),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              IconButton(
-                                icon: const Icon(Icons.delete, color: AppTheme.errorRed, size: 20),
-                                onPressed: () => _removeFromCart(index),
-                                padding: const EdgeInsets.only(left: 8),
-                                constraints: const BoxConstraints(),
+                              Row(
+                                children: [
+                                  IconButton(
+                                    icon: const Icon(Icons.remove_circle_outline, color: AppTheme.primaryBlue, size: 22),
+                                    onPressed: () => _decrementCartItem(index),
+                                    padding: EdgeInsets.zero,
+                                    constraints: const BoxConstraints(),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                                    child: Text(
+                                      '${item.jumlah}',
+                                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  IconButton(
+                                    icon: const Icon(Icons.add_circle_outline, color: AppTheme.primaryBlue, size: 22),
+                                    onPressed: () => _incrementCartItem(index),
+                                    padding: EdgeInsets.zero,
+                                    constraints: const BoxConstraints(),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Text(
+                                    currencyFormatter.format(item.subtotal),
+                                    style: const TextStyle(fontWeight: FontWeight.bold, color: AppTheme.primaryGreen),
+                                  ),
+                                  IconButton(
+                                    icon: const Icon(Icons.delete_outline, color: AppTheme.errorRed, size: 22),
+                                    onPressed: () => _removeFromCart(index),
+                                    padding: const EdgeInsets.only(left: 10),
+                                    constraints: const BoxConstraints(),
+                                  ),
+                                ],
                               ),
                             ],
                           ),

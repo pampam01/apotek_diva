@@ -37,6 +37,7 @@ CREATE TABLE `obat` (
   `satuan` varchar(20) NOT NULL,
   `tanggal_kadaluarsa` date NOT NULL,
   `keterangan` text DEFAULT NULL,
+  `is_deleted` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id_obat`),
   UNIQUE KEY `kode_obat` (`kode_obat`),

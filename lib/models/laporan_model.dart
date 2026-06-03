@@ -22,23 +22,32 @@ class DashboardModel {
 }
 
 class LaporanPenjualanModel {
+  final int idTransaksi;
   final String noFaktur;
   final String tanggalTransaksi;
   final double totalHarga;
+  final double jumlahBayar;
+  final double kembalian;
   final String kasir;
 
   LaporanPenjualanModel({
+    required this.idTransaksi,
     required this.noFaktur,
     required this.tanggalTransaksi,
     required this.totalHarga,
+    required this.jumlahBayar,
+    required this.kembalian,
     required this.kasir,
   });
 
   factory LaporanPenjualanModel.fromJson(Map<String, dynamic> json) {
     return LaporanPenjualanModel(
+      idTransaksi: json['id_transaksi'] is String ? int.parse(json['id_transaksi']) : json['id_transaksi'],
       noFaktur: json['no_faktur'],
       tanggalTransaksi: json['tanggal_transaksi'],
       totalHarga: json['total_harga'] is String ? double.parse(json['total_harga']) : json['total_harga'].toDouble(),
+      jumlahBayar: json['jumlah_bayar'] is String ? double.parse(json['jumlah_bayar']) : json['jumlah_bayar'].toDouble(),
+      kembalian: json['kembalian'] is String ? double.parse(json['kembalian']) : json['kembalian'].toDouble(),
       kasir: json['kasir'],
     );
   }

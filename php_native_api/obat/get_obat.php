@@ -6,11 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     
     $query = "SELECT o.*, k.nama_kategori 
               FROM obat o 
-              LEFT JOIN kategori_obat k ON o.id_kategori = k.id_kategori";
+              LEFT JOIN kategori_obat k ON o.id_kategori = k.id_kategori
+              WHERE o.is_deleted = 0";
               
     if (!empty($search)) {
         $search = "%{$search}%";
-        $query .= " WHERE o.nama_obat LIKE ? OR o.kode_obat LIKE ?";
+        $query .= " AND (o.nama_obat LIKE ? OR o.kode_obat LIKE ?)";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("ss", $search, $search);
     } else {
