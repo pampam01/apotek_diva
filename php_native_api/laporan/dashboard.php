@@ -26,13 +26,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $res_trx = $stmt_trx->get_result();
     $total_transaksi = $res_trx->fetch_assoc()['total_transaksi'] ?? 0;
     
+    // Grafik Penjualan (7 Hari Terakhir)
+    $query_grafik = "SELECT DATE(tanggal_transaksi) as tgl, SUM(total_harga) as total 
+                     FROM transaksi 
+                     WHERE tanggal_transaksi >= DATE_SUB(CURDATE(), INTERVAL 6 DAY)
+                     GROUP BY DATE(tanggal_transaksi)
+                     ORDER BY DATE(tanggal_transaksi) ASC";
+    $result_grafik = $conn->query($query_grafik);
+    $grafik_map = [];
+    
+    // Inisialisasi 7 hari terakhir
+    for ($i = 6; $i >= 0; $i--) {
+        $d = date('Y-m-d', strtotime("-$i days"));
+        $day_name = date('D', strtotime($d));
+        $day_names_id = [
+            'Mon' => 'Sen', 'Tue' => 'Sel', 'Wed' => 'Rab', 
+            'Thu' => 'Kam', 'Fri' => 'Jum', 'Sat' => 'Sab', 'Sun' => 'Min'
+        ];
+        $grafik_map[$d] = [
+            'label' => $day_names_id[$day_name] ?? $day_name,
+            'total' => 0.0
+        ];
+    }
+    
+    if ($result_grafik) {
+        while ($row = $result_grafik->fetch_assoc()) {
+            $tgl = $row['tgl'];
+            if (isset($grafik_map[$tgl])) {
+                $grafik_map[$tgl]['total'] = (float)$row['total'];
+            }
+        }
+    }
+    $chart_data = array_values($grafik_map);
+    
     echo json_encode([
         "status" => "success",
         "data" => [
             "total_penjualan_hari_ini" => (float)$total_penjualan,
             "total_obat" => (int)$total_obat,
             "obat_hampir_habis" => (int)$obat_hampir_habis,
-            "total_transaksi_bulan_ini" => (int)$total_transaksi
+            "total_transaksi_bulan_ini" => (int)$total_transaksi,
+            "chart_data" => $chart_data
         ]
     ]);
 } else {

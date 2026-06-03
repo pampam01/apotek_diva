@@ -130,17 +130,26 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
               const SizedBox(height: 24),
               Text(
-                'Grafik Penjualan (Contoh 7 Hari)',
+                'Grafik Penjualan (7 Hari Terakhir)',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: 16),
-              const SizedBox(
+              SizedBox(
                 height: 200,
-                child: SimpleBarChart(
-                  data: [120000, 250000, 100000, 450000, 300000, 150000, 500000],
-                  labels: ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'],
-                  maxY: 500000,
-                ),
+                child: () {
+                  final chartPoints = _dashboardData?.chartData ?? [];
+                  if (chartPoints.isEmpty) {
+                    return const Center(child: Text('Tidak ada data grafik'));
+                  }
+                  final dataList = chartPoints.map((e) => e.total).toList();
+                  final labelList = chartPoints.map((e) => e.label).toList();
+                  final double maxVal = dataList.fold(0.0, (max, element) => element > max ? element : max);
+                  return SimpleBarChart(
+                    data: dataList,
+                    labels: labelList,
+                    maxY: maxVal > 0 ? maxVal : 100,
+                  );
+                }(),
               ),
             ],
           ),

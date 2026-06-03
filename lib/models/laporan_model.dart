@@ -1,22 +1,42 @@
+class ChartPointModel {
+  final String label;
+  final double total;
+
+  ChartPointModel({required this.label, required this.total});
+
+  factory ChartPointModel.fromJson(Map<String, dynamic> json) {
+    return ChartPointModel(
+      label: json['label'],
+      total: json['total'] is String ? double.parse(json['total']) : json['total'].toDouble(),
+    );
+  }
+}
+
 class DashboardModel {
   final double totalPenjualanHariIni;
   final int totalObat;
   final int obatHampirHabis;
   final int totalTransaksiBulanIni;
+  final List<ChartPointModel> chartData;
 
   DashboardModel({
     required this.totalPenjualanHariIni,
     required this.totalObat,
     required this.obatHampirHabis,
     required this.totalTransaksiBulanIni,
+    required this.chartData,
   });
 
   factory DashboardModel.fromJson(Map<String, dynamic> json) {
+    var list = json['chart_data'] as List? ?? [];
+    List<ChartPointModel> chartList = list.map((i) => ChartPointModel.fromJson(i)).toList();
+
     return DashboardModel(
       totalPenjualanHariIni: json['total_penjualan_hari_ini'] is String ? double.parse(json['total_penjualan_hari_ini']) : json['total_penjualan_hari_ini'].toDouble(),
       totalObat: json['total_obat'] is String ? int.parse(json['total_obat']) : json['total_obat'],
       obatHampirHabis: json['obat_hampir_habis'] is String ? int.parse(json['obat_hampir_habis']) : json['obat_hampir_habis'],
       totalTransaksiBulanIni: json['total_transaksi_bulan_ini'] is String ? int.parse(json['total_transaksi_bulan_ini']) : json['total_transaksi_bulan_ini'],
+      chartData: chartList,
     );
   }
 }

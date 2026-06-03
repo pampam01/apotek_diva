@@ -43,6 +43,7 @@ class _TransaksiScreenState extends State<TransaksiScreen> {
       if (mounted) {
         setState(() {
           _searchResults = results;
+          _searchResults.sort((a, b) => b.stok.compareTo(a.stok));
           for (var obat in results) {
             _obatStokMap[obat.idObat] = obat.stok;
           }
@@ -276,12 +277,27 @@ class _TransaksiScreenState extends State<TransaksiScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(Icons.apps, color: AppTheme.primaryBlue, size: 20),
-                const SizedBox(width: 8),
-                Text(
-                  'Katalog Obat',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                Row(
+                  children: [
+                    const Icon(Icons.apps, color: AppTheme.primaryBlue, size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Katalog Obat',
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const Row(
+                  children: [
+                    Text(
+                      'Scroll kebawah',
+                      style: TextStyle(fontSize: 11, color: Colors.grey, fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(width: 4),
+                    Icon(Icons.arrow_downward, size: 12, color: Colors.grey),
+                  ],
                 ),
               ],
             ),

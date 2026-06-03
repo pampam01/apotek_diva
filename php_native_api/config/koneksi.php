@@ -19,4 +19,16 @@ if ($conn->connect_error) {
         "message" => "Koneksi database gagal: " . $conn->connect_error
     ]));
 }
+
+// Seed default categories if they do not exist
+$conn->query("INSERT IGNORE INTO kategori_obat (id_kategori, nama_kategori) VALUES 
+(1, 'Analgesik'), 
+(2, 'Antibiotik'), 
+(3, 'Vitamin'), 
+(4, 'Obat Batuk'), 
+(5, 'Antihistamin'), 
+(6, 'Antasida'), 
+(7, 'Suplemen'), 
+(8, 'Antiseptik'), 
+(9, 'Obat Luar')");
 ?>

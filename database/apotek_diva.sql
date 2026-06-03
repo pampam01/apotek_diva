@@ -23,7 +23,7 @@ CREATE TABLE `kategori_obat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `kategori_obat` (`nama_kategori`) VALUES
-('Analgesik'), ('Antibiotik'), ('Vitamin'), ('Obat Batuk');
+('Analgesik'), ('Antibiotik'), ('Vitamin'), ('Obat Batuk'), ('Antihistamin'), ('Antasida'), ('Suplemen'), ('Antiseptik'), ('Obat Luar');
 
 
 CREATE TABLE `obat` (

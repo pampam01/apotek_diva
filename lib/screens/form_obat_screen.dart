@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../models/obat_model.dart';
 import '../services/obat_service.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
+import '../theme/app_theme.dart';
 
 class FormObatScreen extends StatefulWidget {
   final ObatModel? obat; // Jika null berarti tambah, jika ada berarti edit
@@ -34,6 +36,11 @@ class _FormObatScreenState extends State<FormObatScreen> {
     {'id': 2, 'nama': 'Antibiotik'},
     {'id': 3, 'nama': 'Vitamin'},
     {'id': 4, 'nama': 'Obat Batuk'},
+    {'id': 5, 'nama': 'Antihistamin'},
+    {'id': 6, 'nama': 'Antasida'},
+    {'id': 7, 'nama': 'Suplemen'},
+    {'id': 8, 'nama': 'Antiseptik'},
+    {'id': 9, 'nama': 'Obat Luar'},
   ];
 
   final List<String> _satuanList = ['Tablet', 'Kapsul', 'Syrup', 'Botol', 'Pcs', 'Salep'];
@@ -57,12 +64,76 @@ class _FormObatScreenState extends State<FormObatScreen> {
       _kodeController.text = 'OBT-${DateTime.now().millisecondsSinceEpoch.toString().substring(8)}';
       _selectedKategori = 1;
       _selectedSatuan = 'Tablet';
-      _kadaluarsaController.text = '2026-12-31';
+      _kadaluarsaController.text = DateFormat('yyyy-MM-dd').format(DateTime.now());
+    }
+  }
+
+  Future<void> _selectKadaluarsaDate(BuildContext context) async {
+    final DateTime now = DateTime.now();
+    final DateTime today = DateTime(now.year, now.month, now.day);
+    
+    DateTime initial = today;
+    try {
+      if (_kadaluarsaController.text.isNotEmpty) {
+        initial = DateTime.parse(_kadaluarsaController.text);
+        if (initial.isBefore(today)) {
+          initial = today;
+        }
+      }
+    } catch (_) {}
+
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: initial,
+      firstDate: today, // Minimal hari ini!
+      lastDate: DateTime(today.year + 20),
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: const ColorScheme.light(
+              primary: AppTheme.primaryBlue,
+              onPrimary: Colors.white,
+              onSurface: Colors.black,
+            ),
+          ),
+          child: child!,
+        );
+      },
+    );
+
+    if (picked != null) {
+      setState(() {
+        _kadaluarsaController.text = DateFormat('yyyy-MM-dd').format(picked);
+      });
     }
   }
 
   void _simpan() async {
     if (!_formKey.currentState!.validate()) return;
+
+    // Validasi harga beli vs harga jual
+    final hargaBeli = double.tryParse(_hargaBeliController.text) ?? 0;
+    final hargaJual = double.tryParse(_hargaJualController.text) ?? 0;
+    if (hargaJual <= hargaBeli) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Row(
+            children: [
+              Icon(Icons.warning, color: Colors.white),
+              SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'Harga Jual harus lebih besar dari Harga Beli!',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+          backgroundColor: Colors.orange,
+        ),
+      );
+      return;
+    }
 
     setState(() => _isLoading = true);
 
@@ -72,8 +143,8 @@ class _FormObatScreenState extends State<FormObatScreen> {
         kodeObat: _kodeController.text,
         namaObat: _namaController.text,
         idKategori: _selectedKategori,
-        hargaBeli: double.parse(_hargaBeliController.text),
-        hargaJual: double.parse(_hargaJualController.text),
+        hargaBeli: hargaBeli,
+        hargaJual: hargaJual,
         stok: int.parse(_stokController.text),
         satuan: _selectedSatuan,
         tanggalKadaluarsa: _kadaluarsaController.text,
@@ -194,10 +265,28 @@ class _FormObatScreenState extends State<FormObatScreen> {
                 ),
               ],
             ),
-            CustomTextField(
-              controller: _kadaluarsaController,
-              label: 'Tanggal Kadaluarsa (YYYY-MM-DD)',
-              validator: (v) => v!.isEmpty ? 'Wajib diisi' : null,
+            GestureDetector(
+              onTap: () => _selectKadaluarsaDate(context),
+              child: AbsorbPointer(
+                child: CustomTextField(
+                  controller: _kadaluarsaController,
+                  label: 'Tanggal Kadaluarsa (Ketuk untuk memilih)',
+                  validator: (v) {
+                    if (v == null || v.isEmpty) return 'Wajib diisi';
+                    try {
+                      final date = DateTime.parse(v);
+                      final now = DateTime.now();
+                      final today = DateTime(now.year, now.month, now.day);
+                      if (date.isBefore(today)) {
+                        return 'Tanggal kadaluarsa minimal hari ini';
+                      }
+                    } catch (_) {
+                      return 'Format tanggal salah';
+                    }
+                    return null;
+                  },
+                ),
+              ),
             ),
             CustomTextField(
               controller: _keteranganController,

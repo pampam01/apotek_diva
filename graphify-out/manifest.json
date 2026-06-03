@@ -15,14 +15,14 @@
     "semantic_hash": "723bf1964220418391e2513e9aa13d4e"
   },
   "D:\\usaha\\apotek_diva\\android\\app\\build.gradle.kts": {
-    "mtime": 1780466038.4062233,
-    "ast_hash": "beb1ee632d013d4b449f1a3485fde703",
-    "semantic_hash": "beb1ee632d013d4b449f1a3485fde703"
+    "mtime": 1780494390.282086,
+    "ast_hash": "916e4b035c05773efa899975c6ed3e56",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\java\\io\\flutter\\plugins\\GeneratedPluginRegistrant.java": {
-    "mtime": 1780490579.0890775,
-    "ast_hash": "5b3b418ce50367c33bded3c0df06d47f",
-    "semantic_hash": "5b3b418ce50367c33bded3c0df06d47f"
+    "mtime": 1780494441.9584515,
+    "ast_hash": "59c8af49bacb3a41478dc3e0adeb19c1",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\kotlin\\com\\example\\apotek_diva\\MainActivity.kt": {
     "mtime": 1780466038.427279,
@@ -30,12 +30,12 @@
     "semantic_hash": "ab846a62da7e584d757c390f2ec40588"
   },
   "D:\\usaha\\apotek_diva\\ios\\Flutter\\flutter_export_environment.sh": {
-    "mtime": 1780466044.7902422,
+    "mtime": 1780494158.551847,
     "ast_hash": "1cdd0a4030aeed518d23aa1709f88751",
     "semantic_hash": "1cdd0a4030aeed518d23aa1709f88751"
   },
   "D:\\usaha\\apotek_diva\\ios\\Flutter\\ephemeral\\flutter_lldb_helper.py": {
-    "mtime": 1780466044.7761688,
+    "mtime": 1780494158.5344424,
     "ast_hash": "98fc75412162af387e2e3461e4e58094",
     "semantic_hash": "98fc75412162af387e2e3461e4e58094"
   },
@@ -45,14 +45,14 @@
     "semantic_hash": "e277c49e98c9f80e9e71c0524a5cb60f"
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\GeneratedPluginRegistrant.h": {
-    "mtime": 1780490579.1266215,
+    "mtime": 1780494442.0141613,
     "ast_hash": "decb9041b5e91a07e66f4664e5dac408",
     "semantic_hash": "decb9041b5e91a07e66f4664e5dac408"
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\GeneratedPluginRegistrant.m": {
-    "mtime": 1780490579.129779,
-    "ast_hash": "f6079b630997f8fd4ae1ac639162419a",
-    "semantic_hash": "f6079b630997f8fd4ae1ac639162419a"
+    "mtime": 1780494442.0198789,
+    "ast_hash": "14ca75c391c97811bc33c91e022a2dcf",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Runner-Bridging-Header.h": {
     "mtime": 1753798129.2114964,
@@ -80,12 +80,12 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\linux\\flutter\\generated_plugin_registrant.cc": {
-    "mtime": 1780490579.1043708,
-    "ast_hash": "d07afe003d5837167bdd357d593f20a0",
-    "semantic_hash": "d07afe003d5837167bdd357d593f20a0"
+    "mtime": 1780494441.9811506,
+    "ast_hash": "bd6e64368e100cca8e55173215ae1bdd",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\linux\\flutter\\generated_plugin_registrant.h": {
-    "mtime": 1780490579.099522,
+    "mtime": 1780494441.9766188,
     "ast_hash": "d295462c9da9f7fef22dc86c34492318",
     "semantic_hash": "d295462c9da9f7fef22dc86c34492318"
   },
@@ -105,12 +105,12 @@
     "semantic_hash": "f6b37d58752c8671078b6f660e33e8c1"
   },
   "D:\\usaha\\apotek_diva\\macos\\Flutter\\GeneratedPluginRegistrant.swift": {
-    "mtime": 1780490579.1351736,
-    "ast_hash": "c840bc53b61279c2fb631741134c2ed7",
-    "semantic_hash": "c840bc53b61279c2fb631741134c2ed7"
+    "mtime": 1780494442.028877,
+    "ast_hash": "ff1dcc48a3950a10b0a882c964d93405",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\macos\\Flutter\\ephemeral\\flutter_export_environment.sh": {
-    "mtime": 1780466044.7932715,
+    "mtime": 1780494158.5568542,
     "ast_hash": "e94d6ac28a3f5324a7d980452eff1c4a",
     "semantic_hash": "e94d6ac28a3f5324a7d980452eff1c4a"
   },
@@ -145,12 +145,12 @@
     "semantic_hash": "603dc00baa46f0905226890654b6a767"
   },
   "D:\\usaha\\apotek_diva\\windows\\flutter\\generated_plugin_registrant.cc": {
-    "mtime": 1780490579.1193666,
-    "ast_hash": "a8f91348d8d9090f22ec69d597c41e1f",
-    "semantic_hash": "a8f91348d8d9090f22ec69d597c41e1f"
+    "mtime": 1780494442.0031626,
+    "ast_hash": "4888d8bfaef1cd889feb447bcec35028",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\windows\\flutter\\generated_plugin_registrant.h": {
-    "mtime": 1780490579.1143672,
+    "mtime": 1780494442.0001497,
     "ast_hash": "0ea33875f9f8e118f9c2ded03e2e2835",
     "semantic_hash": "0ea33875f9f8e118f9c2ded03e2e2835"
   },
@@ -200,8 +200,8 @@
     "semantic_hash": "9e65f4b9beebb674c0dc252f70a5c177"
   },
   "D:\\usaha\\apotek_diva\\pubspec.yaml": {
-    "mtime": 1780466885.7943597,
-    "ast_hash": "aa6348fa250e4c0a09db484949af10f3",
+    "mtime": 1780493674.5002265,
+    "ast_hash": "109a53ad4e51816a732e379c4e31342c",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\README.md": {
@@ -435,8 +435,8 @@
     "semantic_hash": "301a7604d45b3e739efc881eb04896ea"
   },
   "D:\\usaha\\apotek_diva\\database\\apotek_diva.sql": {
-    "mtime": 1780491721.383665,
-    "ast_hash": "1509caa550077548ed68a35c641d084f",
+    "mtime": 1780495187.6149457,
+    "ast_hash": "e51287d2eeee31e622b97d4b7858da2d",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\config\\api_config.dart": {
@@ -455,8 +455,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\models\\laporan_model.dart": {
-    "mtime": 1780492769.1388078,
-    "ast_hash": "4145c8291d516eb01a5e9a403f85e1ab",
+    "mtime": 1780493296.552042,
+    "ast_hash": "fca7c9cdfe3ce45e2871d523b7bac035",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\models\\obat_model.dart": {
@@ -480,18 +480,18 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\dashboard_screen.dart": {
-    "mtime": 1780490970.4878883,
-    "ast_hash": "26fe99093d941bcb4494919cdacfc5f3",
+    "mtime": 1780493327.121466,
+    "ast_hash": "a0225a70bbab73f2174f3c934ef401ee",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\form_obat_screen.dart": {
-    "mtime": 1780490521.96351,
-    "ast_hash": "ca31f93d53abfa06be057756959b956c",
+    "mtime": 1780495197.074188,
+    "ast_hash": "9ce079f941a32adba86a46793603f8dc",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\laporan_screen.dart": {
-    "mtime": 1780492821.5289774,
-    "ast_hash": "22b9e22813c73650462ea9802ac5e98e",
+    "mtime": 1780493936.6728065,
+    "ast_hash": "c839abd326e075d3150dfc71cab5f03e",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\login_screen.dart": {
@@ -510,8 +510,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\transaksi_screen.dart": {
-    "mtime": 1780492819.6611588,
-    "ast_hash": "2e61b16fd0dbb047ba0ee436d1c56218",
+    "mtime": 1780494964.235906,
+    "ast_hash": "368533d7a6f6e9a8a865e3cca46cf5ab",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\services\\auth_service.dart": {
@@ -595,13 +595,13 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\php_native_api\\config\\koneksi.php": {
-    "mtime": 1780491517.1058822,
-    "ast_hash": "35262312edb0d0b18501a9271c1cc533",
+    "mtime": 1780495179.5020318,
+    "ast_hash": "d1e948d835a83d0fc760a3e0b6030f0c",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\php_native_api\\laporan\\dashboard.php": {
-    "mtime": 1780491751.3422525,
-    "ast_hash": "3506578b75aaea89e22c768a633011fc",
+    "mtime": 1780493289.0003629,
+    "ast_hash": "54525ec123080a7d4d313a314aae9037",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\php_native_api\\laporan\\laporan_penjualan.php": {
@@ -662,6 +662,11 @@
   "D:\\usaha\\apotek_diva\\php_native_api\\transaksi\\tambah_transaksi.php": {
     "mtime": 1780467053.8774815,
     "ast_hash": "ca7719fb32b1f02d6b846b908be56f2e",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\database\\insert_kategori.sql": {
+    "mtime": 1780495449.114542,
+    "ast_hash": "d0078ed88a9818b15490ce946ee4cc6a",
     "semantic_hash": ""
   }
 }

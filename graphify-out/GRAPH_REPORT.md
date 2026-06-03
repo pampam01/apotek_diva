@@ -1,16 +1,16 @@
 # Graph Report - apotek_diva  (2026-06-03)
 
 ## Corpus Check
-- 89 files · ~25,272 words
+- 89 files · ~27,768 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 489 nodes · 464 edges · 73 communities (56 shown, 17 thin omitted)
+- 525 nodes · 500 edges · 72 communities (57 shown, 15 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0d7e6dc7`
+- Built from commit: `4f20fb56`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -54,7 +54,6 @@
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
 - [[_COMMUNITY_Community 44|Community 44]]
-- [[_COMMUNITY_Community 45|Community 45]]
 - [[_COMMUNITY_Community 46|Community 46]]
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
@@ -81,22 +80,22 @@
 10. `wWinMain()` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `OnCreate()` --calls--> `RegisterPlugins()`  [INFERRED]
-  windows/runner/flutter_window.cpp → windows/flutter/generated_plugin_registrant.cc
 - `wWinMain()` --calls--> `CreateAndAttachConsole()`  [INFERRED]
   windows/runner/main.cpp → windows/runner/utils.cpp
 - `my_application_activate()` --calls--> `fl_register_plugins()`  [INFERRED]
   linux/runner/my_application.cc → linux/flutter/generated_plugin_registrant.cc
 - `main()` --calls--> `my_application_new()`  [INFERRED]
   linux/runner/main.cc → linux/runner/my_application.cc
+- `OnCreate()` --calls--> `RegisterPlugins()`  [INFERRED]
+  windows/runner/flutter_window.cpp → windows/flutter/generated_plugin_registrant.cc
 - `OnCreate()` --calls--> `GetClientArea()`  [INFERRED]
   windows/runner/flutter_window.cpp → windows/runner/win32_window.cpp
 
-## Communities (73 total, 17 thin omitted)
+## Communities (72 total, 15 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.09
-Nodes (32): Point, RECT, OnCreate(), Create(), Destroy(), EnableFullDpiSupportIfAvailable(), GetClientArea(), GetHandle() (+24 more)
+Cohesion: 0.08
+Nodes (34): RegisterPlugins(), PluginRegistry, Point, RECT, OnCreate(), Create(), Destroy(), EnableFullDpiSupportIfAvailable() (+26 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.10
@@ -148,11 +147,11 @@ Nodes (4): package:apotek_diva/main.dart, package:flutter_test/flutter_test.dart
 
 ### Community 24 - "Community 24"
 Cohesion: 0.06
-Nodes (33): ../models/detail_transaksi_model.dart, ../models/obat_model.dart, ../models/transaksi_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/obat_service.dart, ../services/transaksi_service.dart, struk_screen.dart (+25 more)
+Nodes (34): ../models/detail_transaksi_model.dart, ../models/obat_model.dart, ../models/transaksi_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/obat_service.dart, ../services/transaksi_service.dart, struk_screen.dart (+26 more)
 
 ### Community 25 - "Community 25"
-Cohesion: 0.08
-Nodes (25): ../models/laporan_model.dart, ../models/obat_model.dart, package:apotek_diva/theme/app_theme.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../services/transaksi_service.dart, struk_screen.dart (+17 more)
+Cohesion: 0.04
+Nodes (52): dart:io, ../models/laporan_model.dart, ../models/obat_model.dart, package:apotek_diva/theme/app_theme.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../services/transaksi_service.dart (+44 more)
 
 ### Community 26 - "Community 26"
 Cohesion: 0.10
@@ -163,16 +162,16 @@ Cohesion: 0.12
 Nodes (15): form_obat_screen.dart, ../models/obat_model.dart, package:flutter/material.dart, ../services/obat_service.dart, ../widgets/custom_text_field.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, build (+7 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.12
-Nodes (16): ../models/laporan_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../theme/app_theme.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, login_screen.dart (+8 more)
+Cohesion: 0.10
+Nodes (19): ../models/laporan_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/laporan_service.dart, ../theme/app_theme.dart, ../widgets/error_message.dart, ../widgets/loading_widget.dart, ../widgets/simple_bar_chart.dart (+11 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.12
 Nodes (15): package:flutter/material.dart, ../theme/app_theme.dart, ../widgets/custom_button.dart, ../widgets/custom_text_field.dart, build, Icon, _login, LoginScreen (+7 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.15
-Nodes (12): ../models/obat_model.dart, package:flutter/material.dart, ../services/obat_service.dart, ../widgets/custom_button.dart, ../widgets/custom_text_field.dart, build, FormObatScreen, _FormObatScreenState (+4 more)
+Cohesion: 0.12
+Nodes (16): ../models/obat_model.dart, package:flutter/material.dart, package:intl/intl.dart, ../services/obat_service.dart, ../theme/app_theme.dart, ../widgets/custom_button.dart, ../widgets/custom_text_field.dart, build (+8 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.12
@@ -234,20 +233,24 @@ Nodes (4): package:flutter/material.dart, build, CustomTextField, Padding
 Cohesion: 0.50
 Nodes (3): package:flutter/material.dart, AppTheme, ThemeData
 
+### Community 48 - "Community 48"
+Cohesion: 0.50
+Nodes (3): ChartPointModel, DashboardModel, LaporanPenjualanModel
+
 ## Knowledge Gaps
-- **321 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+316 more)
+- **357 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+352 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `OnCreate()` connect `Community 0` to `Community 3`, `Community 45`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `OnCreate()` connect `Community 0` to `Community 3`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger` to the rest of the system?**
-  _322 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _358 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.09388335704125178 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08130081300813008 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
@@ -255,4 +258,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Community 5` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Community 24` be split into smaller, more focused modules?**
-  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected._
