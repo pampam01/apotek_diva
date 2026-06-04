@@ -20,7 +20,7 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\java\\io\\flutter\\plugins\\GeneratedPluginRegistrant.java": {
-    "mtime": 1780494441.9584515,
+    "mtime": 1780540046.6168523,
     "ast_hash": "59c8af49bacb3a41478dc3e0adeb19c1",
     "semantic_hash": ""
   },
@@ -30,12 +30,12 @@
     "semantic_hash": "ab846a62da7e584d757c390f2ec40588"
   },
   "D:\\usaha\\apotek_diva\\ios\\Flutter\\flutter_export_environment.sh": {
-    "mtime": 1780494158.551847,
+    "mtime": 1780539811.999774,
     "ast_hash": "1cdd0a4030aeed518d23aa1709f88751",
     "semantic_hash": "1cdd0a4030aeed518d23aa1709f88751"
   },
   "D:\\usaha\\apotek_diva\\ios\\Flutter\\ephemeral\\flutter_lldb_helper.py": {
-    "mtime": 1780494158.5344424,
+    "mtime": 1780539811.9873812,
     "ast_hash": "98fc75412162af387e2e3461e4e58094",
     "semantic_hash": "98fc75412162af387e2e3461e4e58094"
   },
@@ -45,12 +45,12 @@
     "semantic_hash": "e277c49e98c9f80e9e71c0524a5cb60f"
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\GeneratedPluginRegistrant.h": {
-    "mtime": 1780494442.0141613,
+    "mtime": 1780540046.6507158,
     "ast_hash": "decb9041b5e91a07e66f4664e5dac408",
     "semantic_hash": "decb9041b5e91a07e66f4664e5dac408"
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\GeneratedPluginRegistrant.m": {
-    "mtime": 1780494442.0198789,
+    "mtime": 1780540046.6547494,
     "ast_hash": "14ca75c391c97811bc33c91e022a2dcf",
     "semantic_hash": ""
   },
@@ -80,12 +80,12 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\linux\\flutter\\generated_plugin_registrant.cc": {
-    "mtime": 1780494441.9811506,
+    "mtime": 1780540046.632985,
     "ast_hash": "bd6e64368e100cca8e55173215ae1bdd",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\linux\\flutter\\generated_plugin_registrant.h": {
-    "mtime": 1780494441.9766188,
+    "mtime": 1780540046.630444,
     "ast_hash": "d295462c9da9f7fef22dc86c34492318",
     "semantic_hash": "d295462c9da9f7fef22dc86c34492318"
   },
@@ -105,12 +105,12 @@
     "semantic_hash": "f6b37d58752c8671078b6f660e33e8c1"
   },
   "D:\\usaha\\apotek_diva\\macos\\Flutter\\GeneratedPluginRegistrant.swift": {
-    "mtime": 1780494442.028877,
+    "mtime": 1780540046.6592233,
     "ast_hash": "ff1dcc48a3950a10b0a882c964d93405",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\macos\\Flutter\\ephemeral\\flutter_export_environment.sh": {
-    "mtime": 1780494158.5568542,
+    "mtime": 1780539812.0043197,
     "ast_hash": "e94d6ac28a3f5324a7d980452eff1c4a",
     "semantic_hash": "e94d6ac28a3f5324a7d980452eff1c4a"
   },
@@ -145,12 +145,12 @@
     "semantic_hash": "603dc00baa46f0905226890654b6a767"
   },
   "D:\\usaha\\apotek_diva\\windows\\flutter\\generated_plugin_registrant.cc": {
-    "mtime": 1780494442.0031626,
+    "mtime": 1780540046.6445792,
     "ast_hash": "4888d8bfaef1cd889feb447bcec35028",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\windows\\flutter\\generated_plugin_registrant.h": {
-    "mtime": 1780494442.0001497,
+    "mtime": 1780540046.6411202,
     "ast_hash": "0ea33875f9f8e118f9c2ded03e2e2835",
     "semantic_hash": "0ea33875f9f8e118f9c2ded03e2e2835"
   },
@@ -200,8 +200,8 @@
     "semantic_hash": "9e65f4b9beebb674c0dc252f70a5c177"
   },
   "D:\\usaha\\apotek_diva\\pubspec.yaml": {
-    "mtime": 1780493674.5002265,
-    "ast_hash": "109a53ad4e51816a732e379c4e31342c",
+    "mtime": 1780538755.411976,
+    "ast_hash": "f8154213da71be056ce22ca8694e0baa",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\README.md": {
@@ -260,104 +260,104 @@
     "semantic_hash": "028602ab9754bffe716659ada7590d29"
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png": {
-    "mtime": 1753798129.1792698,
-    "ast_hash": "13e9c72ec37fac220397aa819fa1ef2d",
-    "semantic_hash": "13e9c72ec37fac220397aa819fa1ef2d"
+    "mtime": 1780538778.7476046,
+    "ast_hash": "9202f31fa4b0d91557fa482213c2f8d9",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png": {
-    "mtime": 1753798129.1812994,
-    "ast_hash": "6270344430679711b81476e29878caa7",
-    "semantic_hash": "6270344430679711b81476e29878caa7"
+    "mtime": 1780538778.7443533,
+    "ast_hash": "09fc139d0e435a848703668087b44e68",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png": {
-    "mtime": 1753798129.1812994,
-    "ast_hash": "a0a8db5985280b3679d99a820ae2db79",
-    "semantic_hash": "a0a8db5985280b3679d99a820ae2db79"
+    "mtime": 1780538778.754419,
+    "ast_hash": "cd7de6d4372107121d1eba5000dd6474",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png": {
-    "mtime": 1753798129.1812994,
-    "ast_hash": "afe1b655b9f32da22f9a4301bb8e6ba8",
-    "semantic_hash": "afe1b655b9f32da22f9a4301bb8e6ba8"
+    "mtime": 1780538778.7656984,
+    "ast_hash": "ac32977a87e80a1d7b9e9c8bb07d7da4",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png": {
-    "mtime": 1753798129.1869805,
-    "ast_hash": "57838d52c318faff743130c3fcfae0c6",
-    "semantic_hash": "57838d52c318faff743130c3fcfae0c6"
+    "mtime": 1780538778.7874534,
+    "ast_hash": "669ac5d6d1a5c3082affa456850ee43e",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-1024x1024@1x.png": {
-    "mtime": 1753798225.8137803,
-    "ast_hash": "c785f8932297af4acd5f5ccb7630f01c",
-    "semantic_hash": "c785f8932297af4acd5f5ccb7630f01c"
+    "mtime": 1780538778.725021,
+    "ast_hash": "7d4f1c24fca41dba4d4f5283d6faea87",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-20x20@1x.png": {
-    "mtime": 1753798225.8337507,
-    "ast_hash": "a2f8558fb1d42514111fbbb19fb67314",
-    "semantic_hash": "a2f8558fb1d42514111fbbb19fb67314"
+    "mtime": 1780538777.7766821,
+    "ast_hash": "9cce9a87d745cd319b426f99318f98c1",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-20x20@2x.png": {
-    "mtime": 1753798225.7438843,
-    "ast_hash": "2247a840b6ee72b8a069208af170e5b1",
-    "semantic_hash": "2247a840b6ee72b8a069208af170e5b1"
+    "mtime": 1780538777.8072789,
+    "ast_hash": "82c0c5246dad2ecbcb71bbc3b719b997",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-20x20@3x.png": {
-    "mtime": 1753798225.8908165,
-    "ast_hash": "1b3b1538136316263c7092951e923e9d",
-    "semantic_hash": "1b3b1538136316263c7092951e923e9d"
+    "mtime": 1780538777.837806,
+    "ast_hash": "3e425be6526a4e58de6dd2f74123d859",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-29x29@1x.png": {
-    "mtime": 1753798226.0060215,
-    "ast_hash": "be8887071dd7ec39cb754d236aa9584f",
-    "semantic_hash": "be8887071dd7ec39cb754d236aa9584f"
+    "mtime": 1780538777.8661013,
+    "ast_hash": "86956344cabe64da4d5c550d110ebe96",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-29x29@2x.png": {
-    "mtime": 1753798225.6078587,
-    "ast_hash": "043119ef4faa026ff82bd03f241e5338",
-    "semantic_hash": "043119ef4faa026ff82bd03f241e5338"
+    "mtime": 1780538777.893773,
+    "ast_hash": "4ab3fb4c83a4f907f8fab2f30126ca2e",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-29x29@3x.png": {
-    "mtime": 1753798225.8525374,
-    "ast_hash": "2b1452c4c1bda6177b4fbbb832df217f",
-    "semantic_hash": "2b1452c4c1bda6177b4fbbb832df217f"
+    "mtime": 1780538777.9243383,
+    "ast_hash": "3cfe00fd804e2c0395eadc2478fb7022",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-40x40@1x.png": {
-    "mtime": 1753798225.6490188,
-    "ast_hash": "2247a840b6ee72b8a069208af170e5b1",
-    "semantic_hash": "2247a840b6ee72b8a069208af170e5b1"
+    "mtime": 1780538777.957459,
+    "ast_hash": "82c0c5246dad2ecbcb71bbc3b719b997",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-40x40@2x.png": {
-    "mtime": 1753798225.9533508,
-    "ast_hash": "8245359312aea1b0d2412f79a07b0ca5",
-    "semantic_hash": "8245359312aea1b0d2412f79a07b0ca5"
+    "mtime": 1780538777.9912558,
+    "ast_hash": "62a5de60d8c7bdc1a3f3709dc301b310",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-40x40@3x.png": {
-    "mtime": 1753798225.6645722,
-    "ast_hash": "5b3c0902200ce596e9848f22e1f0fe0e",
-    "semantic_hash": "5b3c0902200ce596e9848f22e1f0fe0e"
+    "mtime": 1780538778.0244946,
+    "ast_hash": "23bc09dca65a90d96adaad1e5cde68ce",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-60x60@2x.png": {
-    "mtime": 1753798225.7840118,
-    "ast_hash": "5b3c0902200ce596e9848f22e1f0fe0e",
-    "semantic_hash": "5b3c0902200ce596e9848f22e1f0fe0e"
+    "mtime": 1780538778.1778264,
+    "ast_hash": "23bc09dca65a90d96adaad1e5cde68ce",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-60x60@3x.png": {
-    "mtime": 1753798225.56048,
-    "ast_hash": "e419d22a37bc40ba185aca1acb6d4ac6",
-    "semantic_hash": "e419d22a37bc40ba185aca1acb6d4ac6"
+    "mtime": 1780538778.2320359,
+    "ast_hash": "680a58297fe5a9c2ce2549d7448d7841",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-76x76@1x.png": {
-    "mtime": 1753798225.705251,
-    "ast_hash": "36c0d7a7132bdde18898ffdfcfcdc4d2",
-    "semantic_hash": "36c0d7a7132bdde18898ffdfcfcdc4d2"
+    "mtime": 1780538778.3322785,
+    "ast_hash": "395b9b314850a0f5b00229101909f974",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-76x76@2x.png": {
-    "mtime": 1753798226.049932,
-    "ast_hash": "643842917530acf4c5159ae851b0baf2",
-    "semantic_hash": "643842917530acf4c5159ae851b0baf2"
+    "mtime": 1780538778.3705108,
+    "ast_hash": "0b79b8805e72248651184a9e58d785e5",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-83.5x83.5@2x.png": {
-    "mtime": 1753798225.9033291,
-    "ast_hash": "665cb5e3c5729da6d639d26eff47a503",
-    "semantic_hash": "665cb5e3c5729da6d639d26eff47a503"
+    "mtime": 1780538778.411325,
+    "ast_hash": "9080f12e251f294d81734de3de76769e",
+    "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\LaunchImage.imageset\\LaunchImage.png": {
     "mtime": 1753798225.5189037,
@@ -440,8 +440,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\config\\api_config.dart": {
-    "mtime": 1780489649.2037272,
-    "ast_hash": "fe7ccba9222c7422e2836dee2babc219",
+    "mtime": 1780577286.86722,
+    "ast_hash": "167c8c2bac1186e999b12d723d75d3b3",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\models\\detail_transaksi_model.dart": {
@@ -490,13 +490,13 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\laporan_screen.dart": {
-    "mtime": 1780493936.6728065,
+    "mtime": 1780495747.4246671,
     "ast_hash": "c839abd326e075d3150dfc71cab5f03e",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\login_screen.dart": {
-    "mtime": 1780467424.858124,
-    "ast_hash": "fe45aa0e3110ce70b756f7c6cd2885c0",
+    "mtime": 1780497195.7536018,
+    "ast_hash": "b1bc197b11a3f8936522f7c5ebaf9b34",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\screens\\stok_obat_screen.dart": {
@@ -515,28 +515,28 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\services\\auth_service.dart": {
-    "mtime": 1780467232.0790226,
-    "ast_hash": "e66272d6069b31155f25af60cb0686bf",
+    "mtime": 1780539674.7067795,
+    "ast_hash": "1da6a07b657ec5b8abb615cba9cbbe01",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\services\\laporan_service.dart": {
-    "mtime": 1780467268.2686102,
-    "ast_hash": "2bbc8e28f462498e6aef561c4e5dbcb0",
+    "mtime": 1780539725.5607996,
+    "ast_hash": "a6c91c2b75a88b4a3b05c677c880849b",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\services\\obat_service.dart": {
-    "mtime": 1780467243.8905525,
-    "ast_hash": "a3f3b1711515e4c6ab29026978ccd5f5",
+    "mtime": 1780539691.1493134,
+    "ast_hash": "25ffadd56af2cd299a22f361cf7d3d9e",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\services\\pelanggan_service.dart": {
-    "mtime": 1780467278.4423316,
-    "ast_hash": "509fd6bed704767f04037e27b786b6e4",
+    "mtime": 1780539744.1544137,
+    "ast_hash": "237a1ca53c78a6c75f65f6d4be11d43d",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\services\\transaksi_service.dart": {
-    "mtime": 1780467255.0837343,
-    "ast_hash": "f6ca8eadffeee40971c9bb580b587066",
+    "mtime": 1780539707.4590626,
+    "ast_hash": "bfb6a4120d25e5a9abad17f5d8842529",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\lib\\theme\\app_theme.dart": {
@@ -595,8 +595,8 @@
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\php_native_api\\config\\koneksi.php": {
-    "mtime": 1780495179.5020318,
-    "ast_hash": "d1e948d835a83d0fc760a3e0b6030f0c",
+    "mtime": 1780577644.140501,
+    "ast_hash": "6e308d5dea5b9eb66fc5207b0423ae76",
     "semantic_hash": ""
   },
   "D:\\usaha\\apotek_diva\\php_native_api\\laporan\\dashboard.php": {
@@ -667,6 +667,176 @@
   "D:\\usaha\\apotek_diva\\database\\insert_kategori.sql": {
     "mtime": 1780495449.114542,
     "ast_hash": "d0078ed88a9818b15490ce946ee4cc6a",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\assets\\images\\logo.png": {
+    "mtime": 1780497126.6251678,
+    "ast_hash": "d0fafb4a4131c8f635a2ee5649b584ae",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\Contents.json": {
+    "mtime": 1780538555.0075538,
+    "ast_hash": "cc53e59ecea2f00200adef99d67e2538",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher_foreground.png": {
+    "mtime": 1780538778.8119779,
+    "ast_hash": "66f0f68db1f8e88161283de838b81f42",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher_foreground.png": {
+    "mtime": 1780538778.7975357,
+    "ast_hash": "65b2955285aa99b8f10292c922b7b1ef",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher_foreground.png": {
+    "mtime": 1780538778.8348505,
+    "ast_hash": "5d9b8acb729295f5b16eb28610074f8f",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher_foreground.png": {
+    "mtime": 1780538778.976218,
+    "ast_hash": "5a09cdf54f7d627976e3763294f9a6aa",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_launcher_foreground.png": {
+    "mtime": 1780538778.9254436,
+    "ast_hash": "f3ab4f0fcc3dc7bb777f6ee8604ddaed",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-1024x1024@1x.png": {
+    "mtime": 1780538554.9909444,
+    "ast_hash": "7d4f1c24fca41dba4d4f5283d6faea87",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-20x20@1x.png": {
+    "mtime": 1780538554.415831,
+    "ast_hash": "9cce9a87d745cd319b426f99318f98c1",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-20x20@2x.png": {
+    "mtime": 1780538554.567391,
+    "ast_hash": "82c0c5246dad2ecbcb71bbc3b719b997",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-20x20@3x.png": {
+    "mtime": 1780538554.5662346,
+    "ast_hash": "3e425be6526a4e58de6dd2f74123d859",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-29x29@1x.png": {
+    "mtime": 1780538554.5724463,
+    "ast_hash": "86956344cabe64da4d5c550d110ebe96",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-29x29@2x.png": {
+    "mtime": 1780538554.570203,
+    "ast_hash": "4ab3fb4c83a4f907f8fab2f30126ca2e",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-29x29@3x.png": {
+    "mtime": 1780538554.591932,
+    "ast_hash": "3cfe00fd804e2c0395eadc2478fb7022",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-40x40@1x.png": {
+    "mtime": 1780538554.578581,
+    "ast_hash": "82c0c5246dad2ecbcb71bbc3b719b997",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-40x40@2x.png": {
+    "mtime": 1780538554.5765343,
+    "ast_hash": "62a5de60d8c7bdc1a3f3709dc301b310",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-40x40@3x.png": {
+    "mtime": 1780538554.586014,
+    "ast_hash": "23bc09dca65a90d96adaad1e5cde68ce",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-50x50@1x.png": {
+    "mtime": 1780538554.5949588,
+    "ast_hash": "1a106a6854f508566cc3bd4ce76b5459",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-50x50@2x.png": {
+    "mtime": 1780538554.6010165,
+    "ast_hash": "b9b0707e40f78552d3dfd94c3357161b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-57x57@1x.png": {
+    "mtime": 1780538554.669891,
+    "ast_hash": "ddd225dac46e66a6c7a61bce4f86f181",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-57x57@2x.png": {
+    "mtime": 1780538554.6492755,
+    "ast_hash": "4b9d0b5b5c0f80182c1f65c67adaeb89",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-60x60@2x.png": {
+    "mtime": 1780538554.6319904,
+    "ast_hash": "23bc09dca65a90d96adaad1e5cde68ce",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-60x60@3x.png": {
+    "mtime": 1780538554.617342,
+    "ast_hash": "680a58297fe5a9c2ce2549d7448d7841",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-72x72@1x.png": {
+    "mtime": 1780538554.6203282,
+    "ast_hash": "9202f31fa4b0d91557fa482213c2f8d9",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-72x72@2x.png": {
+    "mtime": 1780538554.6422708,
+    "ast_hash": "ac32977a87e80a1d7b9e9c8bb07d7da4",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-76x76@1x.png": {
+    "mtime": 1780538554.666294,
+    "ast_hash": "395b9b314850a0f5b00229101909f974",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-76x76@2x.png": {
+    "mtime": 1780538554.6621015,
+    "ast_hash": "0b79b8805e72248651184a9e58d785e5",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\true.appiconset\\true-83.5x83.5@2x.png": {
+    "mtime": 1780538554.6851542,
+    "ast_hash": "9080f12e251f294d81734de3de76769e",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-50x50@1x.png": {
+    "mtime": 1780538778.0524344,
+    "ast_hash": "1a106a6854f508566cc3bd4ce76b5459",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-50x50@2x.png": {
+    "mtime": 1780538778.082968,
+    "ast_hash": "b9b0707e40f78552d3dfd94c3357161b",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-57x57@1x.png": {
+    "mtime": 1780538778.109975,
+    "ast_hash": "ddd225dac46e66a6c7a61bce4f86f181",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-57x57@2x.png": {
+    "mtime": 1780538778.1429653,
+    "ast_hash": "4b9d0b5b5c0f80182c1f65c67adaeb89",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-72x72@1x.png": {
+    "mtime": 1780538778.2642455,
+    "ast_hash": "9202f31fa4b0d91557fa482213c2f8d9",
+    "semantic_hash": ""
+  },
+  "D:\\usaha\\apotek_diva\\ios\\Runner\\Assets.xcassets\\AppIcon.appiconset\\Icon-App-72x72@2x.png": {
+    "mtime": 1780538778.3035405,
+    "ast_hash": "ac32977a87e80a1d7b9e9c8bb07d7da4",
     "semantic_hash": ""
   }
 }

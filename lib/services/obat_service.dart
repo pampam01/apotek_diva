@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import '../config/api_config.dart';
 import '../models/obat_model.dart';
 
@@ -7,7 +6,7 @@ class ObatService {
   Future<List<ObatModel>> getObat({String search = ''}) async {
     try {
       final uri = Uri.parse('${ApiConfig.getObat}?search=$search');
-      final response = await http.get(uri);
+      final response = await httpClient.get(uri);
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -28,7 +27,7 @@ class ObatService {
 
   Future<void> tambahObat(ObatModel obat) async {
     try {
-      final response = await http.post(
+      final response = await httpClient.post(
         Uri.parse(ApiConfig.tambahObat),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(obat.toJson()),
@@ -49,7 +48,7 @@ class ObatService {
 
   Future<void> updateObat(ObatModel obat) async {
     try {
-      final response = await http.post(
+      final response = await httpClient.post(
         Uri.parse(ApiConfig.editObat),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(obat.toJson()),
@@ -70,7 +69,7 @@ class ObatService {
 
   Future<void> hapusObat(int idObat) async {
     try {
-      final response = await http.post(
+      final response = await httpClient.post(
         Uri.parse(ApiConfig.hapusObat),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'id_obat': idObat}),

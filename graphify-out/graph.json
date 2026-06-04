@@ -372,6 +372,51 @@
       "norm_label": "author"
     },
     {
+      "label": "Contents.json",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "id": "ios_runner_assets_xcassets_true_appiconset_contents_json",
+      "community": 2,
+      "norm_label": "contents.json"
+    },
+    {
+      "label": "images",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "id": "true_appiconset_contents_images",
+      "community": 2,
+      "norm_label": "images"
+    },
+    {
+      "label": "info",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "id": "true_appiconset_contents_info",
+      "community": 2,
+      "norm_label": "info"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "id": "true_appiconset_contents_info_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "id": "true_appiconset_contents_info_author",
+      "community": 2,
+      "norm_label": "author"
+    },
+    {
       "label": "RunnerTests.swift",
       "file_type": "code",
       "source_file": "ios/RunnerTests/RunnerTests.swift",
@@ -507,6 +552,15 @@
       "norm_label": "api_config.dart"
     },
     {
+      "label": "BypassClient",
+      "file_type": "code",
+      "source_file": "lib/config/api_config.dart",
+      "source_location": null,
+      "id": "config_api_config_bypassclient",
+      "community": 51,
+      "norm_label": "bypassclient"
+    },
+    {
       "label": "ApiConfig",
       "file_type": "code",
       "source_file": "lib/config/api_config.dart",
@@ -514,6 +568,15 @@
       "id": "config_api_config_apiconfig",
       "community": 51,
       "norm_label": "apiconfig"
+    },
+    {
+      "label": "package:http/http.dart",
+      "file_type": "code",
+      "source_file": "lib/config/api_config.dart",
+      "source_location": null,
+      "id": "package_http_http_dart",
+      "community": 51,
+      "norm_label": "package:http/http.dart"
     },
     {
       "label": "detail_transaksi_model.dart",
@@ -1515,15 +1578,6 @@
       "norm_label": "scaffold"
     },
     {
-      "label": "Icon",
-      "file_type": "code",
-      "source_file": "lib/screens/login_screen.dart",
-      "source_location": null,
-      "id": "screens_login_screen_icon",
-      "community": 29,
-      "norm_label": "icon"
-    },
-    {
       "label": "SizedBox",
       "file_type": "code",
       "source_file": "lib/screens/login_screen.dart",
@@ -2208,15 +2262,6 @@
       "norm_label": "dart:convert"
     },
     {
-      "label": "package:http/http.dart",
-      "file_type": "code",
-      "source_file": "lib/services/auth_service.dart",
-      "source_location": null,
-      "id": "lib_services_auth_service_dart_package_http_http_dart",
-      "community": 36,
-      "norm_label": "package:http/http.dart"
-    },
-    {
       "label": "../config/api_config.dart",
       "file_type": "code",
       "source_file": "lib/services/auth_service.dart",
@@ -2269,15 +2314,6 @@
       "id": "lib_services_laporan_service_dart_dart_convert",
       "community": 35,
       "norm_label": "dart:convert"
-    },
-    {
-      "label": "package:http/http.dart",
-      "file_type": "code",
-      "source_file": "lib/services/laporan_service.dart",
-      "source_location": null,
-      "id": "lib_services_laporan_service_dart_package_http_http_dart",
-      "community": 35,
-      "norm_label": "package:http/http.dart"
     },
     {
       "label": "../config/api_config.dart",
@@ -2343,15 +2379,6 @@
       "norm_label": "dart:convert"
     },
     {
-      "label": "package:http/http.dart",
-      "file_type": "code",
-      "source_file": "lib/services/obat_service.dart",
-      "source_location": null,
-      "id": "lib_services_obat_service_dart_package_http_http_dart",
-      "community": 37,
-      "norm_label": "package:http/http.dart"
-    },
-    {
       "label": "../config/api_config.dart",
       "file_type": "code",
       "source_file": "lib/services/obat_service.dart",
@@ -2406,15 +2433,6 @@
       "norm_label": "dart:convert"
     },
     {
-      "label": "package:http/http.dart",
-      "file_type": "code",
-      "source_file": "lib/services/pelanggan_service.dart",
-      "source_location": null,
-      "id": "lib_services_pelanggan_service_dart_package_http_http_dart",
-      "community": 38,
-      "norm_label": "package:http/http.dart"
-    },
-    {
       "label": "../config/api_config.dart",
       "file_type": "code",
       "source_file": "lib/services/pelanggan_service.dart",
@@ -2467,15 +2485,6 @@
       "id": "lib_services_transaksi_service_dart_dart_convert",
       "community": 39,
       "norm_label": "dart:convert"
-    },
-    {
-      "label": "package:http/http.dart",
-      "file_type": "code",
-      "source_file": "lib/services/transaksi_service.dart",
-      "source_location": null,
-      "id": "lib_services_transaksi_service_dart_package_http_http_dart",
-      "community": 39,
-      "norm_label": "package:http/http.dart"
     },
     {
       "label": "../config/api_config.dart",
@@ -4601,6 +4610,60 @@
       "norm_label": "launch screen assets"
     },
     {
+      "label": "package:http/http.dart",
+      "file_type": "code",
+      "source_file": "lib/services/auth_service.dart",
+      "source_location": null,
+      "community": 36,
+      "norm_label": "package:http/http.dart",
+      "id": "lib_services_auth_service_dart_package_http_http_dart"
+    },
+    {
+      "label": "package:http/http.dart",
+      "file_type": "code",
+      "source_file": "lib/services/laporan_service.dart",
+      "source_location": null,
+      "community": 35,
+      "norm_label": "package:http/http.dart",
+      "id": "lib_services_laporan_service_dart_package_http_http_dart"
+    },
+    {
+      "label": "package:http/http.dart",
+      "file_type": "code",
+      "source_file": "lib/services/obat_service.dart",
+      "source_location": null,
+      "community": 37,
+      "norm_label": "package:http/http.dart",
+      "id": "lib_services_obat_service_dart_package_http_http_dart"
+    },
+    {
+      "label": "package:http/http.dart",
+      "file_type": "code",
+      "source_file": "lib/services/pelanggan_service.dart",
+      "source_location": null,
+      "community": 38,
+      "norm_label": "package:http/http.dart",
+      "id": "lib_services_pelanggan_service_dart_package_http_http_dart"
+    },
+    {
+      "label": "package:http/http.dart",
+      "file_type": "code",
+      "source_file": "lib/services/transaksi_service.dart",
+      "source_location": null,
+      "community": 39,
+      "norm_label": "package:http/http.dart",
+      "id": "lib_services_transaksi_service_dart_package_http_http_dart"
+    },
+    {
+      "label": "Icon",
+      "file_type": "code",
+      "source_file": "lib/screens/login_screen.dart",
+      "source_location": null,
+      "community": 29,
+      "norm_label": "icon",
+      "id": "screens_login_screen_icon"
+    },
+    {
       "label": "TextButton",
       "file_type": "code",
       "source_file": "lib/screens/laporan_screen.dart",
@@ -5046,6 +5109,46 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ios_runner_assets_xcassets_true_appiconset_contents_json",
+      "target": "true_appiconset_contents_images"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ios_runner_assets_xcassets_true_appiconset_contents_json",
+      "target": "true_appiconset_contents_info"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "true_appiconset_contents_info",
+      "target": "true_appiconset_contents_info_author"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ios/Runner/Assets.xcassets/true.appiconset/Contents.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "true_appiconset_contents_info",
+      "target": "true_appiconset_contents_info_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "ios/RunnerTests/RunnerTests.swift",
       "source_location": "L5",
       "weight": 1.0,
@@ -5242,6 +5345,26 @@
       "weight": 1.0,
       "source": "lib_config_api_config_dart",
       "target": "config_api_config_apiconfig"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/config/api_config.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_config_api_config_dart",
+      "target": "config_api_config_bypassclient"
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/config/api_config.dart",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_config_api_config_dart",
+      "target": "package_http_http_dart"
     },
     {
       "relation": "defines",
@@ -9854,5 +9977,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4f20fb56e412c9d5da20acf2a10a63dcc4fca012"
+  "built_at_commit": "70071d9f020a950c717a58736d6ab41c7c195de2"
 }

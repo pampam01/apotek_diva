@@ -1,22 +1,23 @@
-# Graph Report - apotek_diva  (2026-06-03)
+# Graph Report - apotek_diva  (2026-06-04)
 
 ## Corpus Check
-- 89 files · ~27,768 words
+- 91 files · ~89,106 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 525 nodes · 500 edges · 72 communities (57 shown, 15 thin omitted)
+- 532 nodes · 506 edges · 73 communities (59 shown, 14 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4f20fb56`
+- Built from commit: `70071d9f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]
 - [[_COMMUNITY_Community 1|Community 1]]
+- [[_COMMUNITY_Community 2|Community 2]]
 - [[_COMMUNITY_Community 3|Community 3]]
 - [[_COMMUNITY_Community 4|Community 4]]
 - [[_COMMUNITY_Community 5|Community 5]]
@@ -91,7 +92,7 @@
 - `OnCreate()` --calls--> `GetClientArea()`  [INFERRED]
   windows/runner/flutter_window.cpp → windows/runner/win32_window.cpp
 
-## Communities (72 total, 15 thin omitted)
+## Communities (73 total, 14 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.08
@@ -100,6 +101,10 @@ Nodes (34): RegisterPlugins(), PluginRegistry, Point, RECT, OnCreate(), Create()
 ### Community 1 - "Community 1"
 Cohesion: 0.10
 Nodes (20): FlPluginRegistry, fl_register_plugins(), GApplication, gboolean, gchar, GObject, GtkApplication, MyApplicationClass (+12 more)
+
+### Community 2 - "Community 2"
+Cohesion: 0.40
+Nodes (4): images, info, author, version
 
 ### Community 3 - "Community 3"
 Cohesion: 0.10
@@ -237,10 +242,14 @@ Nodes (3): package:flutter/material.dart, AppTheme, ThemeData
 Cohesion: 0.50
 Nodes (3): ChartPointModel, DashboardModel, LaporanPenjualanModel
 
+### Community 51 - "Community 51"
+Cohesion: 0.50
+Nodes (3): ApiConfig, BypassClient, package:http/http.dart
+
 ## Knowledge Gaps
-- **357 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+352 more)
+- **362 isolated node(s):** `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger`, `UIApplication`, `Any` (+357 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -248,7 +257,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `OnCreate()` connect `Community 0` to `Community 3`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `flutter_export_environment.sh script`, `SBFrame`, `SBDebugger` to the rest of the system?**
-  _358 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _363 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.08130081300813008 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

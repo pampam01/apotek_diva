@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import '../config/api_config.dart';
 import '../models/laporan_model.dart';
 import '../models/obat_model.dart';
@@ -7,7 +6,7 @@ import '../models/obat_model.dart';
 class LaporanService {
   Future<DashboardModel> getDashboard() async {
     try {
-      final response = await http.get(Uri.parse(ApiConfig.dashboard));
+      final response = await httpClient.get(Uri.parse(ApiConfig.dashboard));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -27,7 +26,7 @@ class LaporanService {
   Future<Map<String, dynamic>> getLaporanPenjualan(String startDate, String endDate) async {
     try {
       final uri = Uri.parse('${ApiConfig.laporanPenjualan}?start_date=$startDate&end_date=$endDate');
-      final response = await http.get(uri);
+      final response = await httpClient.get(uri);
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -53,7 +52,7 @@ class LaporanService {
   Future<List<ObatModel>> getLaporanStok({bool all = false}) async {
     try {
       final uri = Uri.parse('${ApiConfig.laporanStok}?all=${all ? 1 : 0}');
-      final response = await http.get(uri);
+      final response = await httpClient.get(uri);
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);

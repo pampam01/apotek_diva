@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import '../config/api_config.dart';
 import '../models/pelanggan_model.dart';
 
@@ -7,7 +6,7 @@ class PelangganService {
   Future<List<PelangganModel>> getPelanggan({String search = ''}) async {
     try {
       final uri = Uri.parse('${ApiConfig.getPelanggan}?search=$search');
-      final response = await http.get(uri);
+      final response = await httpClient.get(uri);
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -28,7 +27,7 @@ class PelangganService {
 
   Future<void> tambahPelanggan(PelangganModel pelanggan) async {
     try {
-      final response = await http.post(
+      final response = await httpClient.post(
         Uri.parse(ApiConfig.tambahPelanggan),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(pelanggan.toJson()),

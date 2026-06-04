@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import '../config/api_config.dart';
 import '../models/transaksi_model.dart';
 
@@ -7,7 +6,7 @@ class TransaksiService {
   Future<List<TransaksiModel>> getTransaksi({String search = ''}) async {
     try {
       final uri = Uri.parse('${ApiConfig.getTransaksi}?search=$search');
-      final response = await http.get(uri);
+      final response = await httpClient.get(uri);
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -29,7 +28,7 @@ class TransaksiService {
   Future<TransaksiModel> getDetailTransaksi(int idTransaksi) async {
     try {
       final uri = Uri.parse('${ApiConfig.detailTransaksi}?id_transaksi=$idTransaksi');
-      final response = await http.get(uri);
+      final response = await httpClient.get(uri);
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -48,7 +47,7 @@ class TransaksiService {
 
   Future<Map<String, dynamic>> tambahTransaksi(TransaksiModel transaksi) async {
     try {
-      final response = await http.post(
+      final response = await httpClient.post(
         Uri.parse(ApiConfig.tambahTransaksi),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(transaksi.toJson()),

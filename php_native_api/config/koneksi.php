@@ -7,9 +7,9 @@ header("Content-Type: application/json; charset=UTF-8");
 mysqli_report(MYSQLI_REPORT_OFF); // Prevent PHP 8.1+ from throwing uncaught exceptions on SQL errors
 
 $host = "localhost";
-$user = "root"; // Sesuaikan jika menggunakan InfinityFree
-$pass = ""; // Sesuaikan jika menggunakan InfinityFree
-$db   = "apotek_diva"; // Sesuaikan jika menggunakan InfinityFree
+$user = "prapam49_apotek_diva";
+$pass = "ApotekDiva2026!";
+$db   = "prapam49_apotek_diva";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
